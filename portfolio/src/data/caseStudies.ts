@@ -601,10 +601,12 @@ export const caseStudies: CaseStudy[] = [
       { label: "Colour Swatches", isNew: true },
     ],
     wireframes: [
-      { label: "Product Listing — Grid View",  src: "https://www.figma.com/api/mcp/asset/5ea79a4d-61c1-466c-84df-a7163bdae729" },
-      { label: "Slide-out Filter Panel",       src: "https://www.figma.com/api/mcp/asset/8a3e4709-41b4-4ec4-a509-cac947aa66cc" },
-      { label: "Quick Add Interaction",        src: "https://www.figma.com/api/mcp/asset/a872aca7-e76a-4dcd-b7ed-a010c87fdd09" },
-      { label: "See Similar Feature",          src: "https://www.figma.com/api/mcp/asset/0da9b0a7-c547-44ac-9267-378901562366" },
+      { label: "Product Listing Page",         src: "https://www.figma.com/api/mcp/asset/99ccd712-fb6f-4ce4-b811-cf99580d96f1" },
+      { label: "Filter Panel",                 src: "https://www.figma.com/api/mcp/asset/e94295a9-07d5-4ec3-bef9-b35706f0663c" },
+      { label: "Quick Add",                    src: "https://www.figma.com/api/mcp/asset/5910de19-fcf7-4ef7-ac78-25022e0d422f" },
+      { label: "See Similar",                  src: "https://www.figma.com/api/mcp/asset/e4c38de6-9063-4489-80f0-1781728854fd" },
+      { label: "Browse Flow",                  src: "https://www.figma.com/api/mcp/asset/e50faf77-886d-4733-a4d5-c5c703d6fa6b" },
+      { label: "Category Navigation",          src: "https://www.figma.com/api/mcp/asset/b5a13f09-1782-4276-8720-cf1c6f649f8a" },
     ],
     userTesting: {
       context:
@@ -646,25 +648,25 @@ export const caseStudies: CaseStudy[] = [
           number:      "01",
           label:       "Product Listing Page",
           description: "Redesigned grid with larger cards, colour swatches, deal labels, and rating visibility. Quick Add surfaced as a primary affordance on each card.",
-          src:         "https://www.figma.com/api/mcp/asset/99ccd712-fb6f-4ce4-b811-cf99580d96f1",
+          src:         "https://www.figma.com/api/mcp/asset/5ea79a4d-61c1-466c-84df-a7163bdae729",
         },
         {
           number:      "02",
           label:       "Filter Panel",
           description: "Slide-out filter with simplified top-level options. Size and price defaulted above the fold — advanced filters accessible below.",
-          src:         "https://www.figma.com/api/mcp/asset/e94295a9-07d5-4ec3-bef9-b35706f0663c",
+          src:         "https://www.figma.com/api/mcp/asset/8a3e4709-41b4-4ec4-a509-cac947aa66cc",
         },
         {
           number:      "03",
           label:       "Quick Add",
           description: "A size selector opens directly over the listing card — cart without leaving the PLP. Single-tap from browse to basket.",
-          src:         "https://www.figma.com/api/mcp/asset/5910de19-fcf7-4ef7-ac78-25022e0d422f",
+          src:         "https://www.figma.com/api/mcp/asset/a872aca7-e76a-4dcd-b7ed-a010c87fdd09",
         },
         {
           number:      "04",
           label:       "See Similar",
           description: "Related products surface inline on the PLP — contextual discovery without a separate search or navigation step.",
-          src:         "https://www.figma.com/api/mcp/asset/e4c38de6-9063-4489-80f0-1781728854fd",
+          src:         "https://www.figma.com/api/mcp/asset/0da9b0a7-c547-44ac-9267-378901562366",
         },
       ],
       feedback: {
