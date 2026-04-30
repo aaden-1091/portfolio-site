@@ -6,6 +6,7 @@ import {
   getCaseStudy,
   type JourneyFlow,
   type CompetitorAnalysis,
+  type SolutionFeature,
   type UserTesting,
   type UserTestingFeedback,
 } from "@/data/caseStudies";
@@ -223,6 +224,36 @@ function CompetitorAnalysisSection({ data }: { data: CompetitorAnalysis }) {
           </ul>
         </div>
       )}
+    </div>
+  );
+}
+
+function SolutionFeaturesSection({ features }: { features: SolutionFeature[] }) {
+  return (
+    <div className="pl-6 flex flex-col gap-6">
+      <p className="text-xs font-bold uppercase tracking-widest text-ink-light">
+        Key features in scope
+      </p>
+      <div className="flex flex-wrap gap-3">
+        {features.map((f) => (
+          <div
+            key={f.label}
+            className={[
+              "flex items-center gap-2 rounded-sm px-4 py-2.5 border text-sm font-semibold",
+              f.isNew
+                ? "bg-accent/10 border-accent/20 text-ink"
+                : "bg-background border-ink/10 text-ink-light",
+            ].join(" ")}
+          >
+            {f.label}
+            {f.isNew && (
+              <span className="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-sm bg-accent text-background leading-none">
+                New
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -492,6 +523,20 @@ export default async function CaseStudyPage({
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
               <SectionHeading>Journey Flow</SectionHeading>
               <JourneyFlowDiagram flow={cs.journeyFlow} />
+            </div>
+          </section>
+        )}
+
+        {/* ── Solution Features ────────────────────────────────────────────── */}
+        {cs.solutionFeatures && cs.solutionFeatures.length > 0 && (
+          <section
+            className={`bg-background ${sectionPadding}`}
+            style={sectionSpacing}
+            aria-labelledby="cs-solution"
+          >
+            <div className="max-w-5xl mx-auto flex flex-col gap-10">
+              <SectionHeading>Solution</SectionHeading>
+              <SolutionFeaturesSection features={cs.solutionFeatures} />
             </div>
           </section>
         )}

@@ -76,27 +76,33 @@ export interface UserTestingFeedback {
   keyInsight?: string;
 }
 
+export interface SolutionFeature {
+  label:  string;
+  isNew?: boolean;
+}
+
 export interface CaseStudy {
-  slug:                string;
-  title:               string;
-  company:             string;
-  year:                string;
-  tags:                string[];
-  description:         string;
-  brief:               string;
-  user:                string;
-  challenges:          string[];
-  objectives:          string[];
-  userNeeds:           string[];
-  keyQuestions:        string[];
-  competitorAnalysis?: CompetitorAnalysis;
-  journeyFlow?:        JourneyFlow;
-  wireframes?:         Wireframe[];
-  userTesting?:        UserTesting;
-  userTestingFeedback?:UserTestingFeedback;
-  detailedDesign?:     DetailedDesign;
-  prototypeUrl?:       string;
-  nextSlug?:           string;
+  slug:                 string;
+  title:                string;
+  company:              string;
+  year:                 string;
+  tags:                 string[];
+  description:          string;
+  brief:                string;
+  user:                 string;
+  challenges:           string[];
+  objectives:           string[];
+  userNeeds:            string[];
+  keyQuestions:         string[];
+  competitorAnalysis?:  CompetitorAnalysis;
+  journeyFlow?:         JourneyFlow;
+  solutionFeatures?:    SolutionFeature[];
+  wireframes?:          Wireframe[];
+  userTesting?:         UserTesting;
+  userTestingFeedback?: UserTestingFeedback;
+  detailedDesign?:      DetailedDesign;
+  prototypeUrl?:        string;
+  nextSlug?:            string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -441,6 +447,244 @@ export const caseStudies: CaseStudy[] = [
       ctaNote: "Designs cover the full reader and subscriber journey across mobile and desktop — discovery through to paywall, account creation, and ongoing management.",
     },
     nextSlug: "target-plp-uplift",
+  },
+  {
+    slug:        "target-plp-uplift",
+    title:       "Product Listing Uplift",
+    company:     "Target Australia",
+    year:        "2023",
+    tags:        ["UX Design", "E-commerce"],
+    description: "Uplift the product listing experience for the Target Australia app.",
+    brief:
+      "Target Australia's app product listing page was built for the web era — dense layouts, small product cards, buried filters, and no native mobile interactions. The brief was to redesign the PLP to match how Australians actually shop on their phones: faster browsing, smarter filtering, and enough product context to make a decision without tapping into every item individually.",
+    user:
+      "Mobile shoppers scanning the Target Australia app across categories — checking size availability, comparing prices, and deciding whether something is worth a closer look. Often browsing on the go, with limited patience for extra taps.",
+    challenges: [
+      "Important product details — size, material, availability — required extra taps to surface, creating hesitation at the point of decision",
+      "Filters and sorting options were buried or unclear, reducing the time users spent engaging with the listing page",
+      "An overloaded layout made it harder for users to focus on products rather than the interface around them",
+      "Development and technology constraints shaped which native mobile interactions could be introduced within scope",
+      "A single PLP template had to hold across Target's full catalogue — clothing, homewares, electronics, and groceries",
+    ],
+    objectives: [
+      "Simplify the PLP layout so browsing, comparing, and filtering products requires fewer taps and less cognitive load.",
+      "Surface price, size, and availability at the listing level — so users can decide without drilling into individual product pages.",
+      "Introduce native mobile interactions: swipe-through images, quick add to cart, and a slide-out filter panel.",
+      "Add personalised product recommendations to reduce navigation paralysis and help users discover relevant items.",
+      "Design a scalable template that holds across Target's full product catalogue — not just fashion.",
+    ],
+    userNeeds: [
+      "Efficient browsing and filtering to find what they want without losing their place in the list",
+      "Product details — price, size, availability — visible at a glance without tapping into each item",
+      "Fast load times and smooth interactions on mobile — the same standard they expect from other shopping apps",
+      "Product recommendations based on their browsing patterns — not generic or irrelevant suggestions",
+      "Clear size options and real-time stock updates, so they don't add something to cart that isn't available",
+      "Quick visibility of trending items, deals, and new arrivals without needing to sort manually",
+    ],
+    keyQuestions: [
+      "How do you typically start looking for something on a shopping app — search first, or browse by category?",
+      "Walk me through the last time you used a filter on a product listing. What were you trying to do, and did it work?",
+      "When you're scanning products on your phone, what information do you need to decide whether something is worth tapping into?",
+      "Have you ever added something to your cart directly from a listing page without going into the product detail? What made that possible?",
+      "What frustrates you most about browsing products on mobile — too many steps, not enough information, or something else?",
+      "If you find something you like but you're not sure about the size, what do you do?",
+      "How useful is seeing similar or recommended products while browsing? Does it help you discover things, or does it distract?",
+    ],
+    competitorAnalysis: {
+      context:
+        "Four retailers were benchmarked across browsing, filtering, product detail surfacing, and mobile interaction — mapping the standard that Target's PLP needed to meet or exceed.",
+      competitors: [
+        {
+          name:     "ASOS",
+          category: "Global Fashion",
+          strengths: [
+            "PLP handles easy scrolling and quick filtering — the experience holds even across a catalogue of thousands of SKUs",
+            "Personalised product suggestions appear at listing level based on browsing history — before users have searched for anything",
+          ],
+          weaknesses: [
+            "Navigation can feel overwhelming for users not specifically looking for fashion",
+            "Mobile filtering requires multiple taps — not a native-feeling interaction on iOS or Android",
+          ],
+          takeaway:
+            "Personalisation at listing level reduces discovery friction — users land on products that already match their history, meaning less browsing depth needed to find something relevant.",
+        },
+        {
+          name:     "H&M",
+          category: "High Street Fashion",
+          strengths: [
+            "Easily accessible size guides reduce hesitation before opening a product detail page",
+            "Clear colour swatches with easy toggling between sizes and styles directly at listing level",
+          ],
+          weaknesses: [
+            "Product card images are small on mobile, requiring zoom or a tap into the PDP to assess quality",
+            "Filter panel interaction is not always predictably dismissable — causes confusion mid-session",
+          ],
+          takeaway:
+            "Size confidence at listing level is a direct conversion driver — surfacing size and colour on the card removes the main reason users tap away without adding to cart.",
+        },
+        {
+          name:     "Cotton On",
+          category: "Australian Retail",
+          strengths: [
+            "PLP is highly responsive and consistent across device sizes — tested on smaller iOS screens",
+            "Intuitive sorting options (new arrivals, price, bestsellers) — top two sort criteria match observed user behaviour",
+          ],
+          weaknesses: [
+            "Product descriptions on the PLP are minimal — users often need to tap through for material or fit information",
+            "Promotional labels compete visually with product images, reducing scan clarity",
+          ],
+          takeaway:
+            "Sorting hierarchy matters as much as filtering — new arrivals and bestsellers cover the majority of PLP sort interactions and should be surfaced first, not buried in a dropdown.",
+        },
+        {
+          name:     "Sephora",
+          category: "Beauty Retail",
+          strengths: [
+            "Interactive features — colour swatches, zoomable images, product demos — make the listing experience actively engaging",
+            "Key product attributes (ingredients, certifications) surfaced upfront for users with specific needs or restrictions",
+          ],
+          weaknesses: [
+            "Category-specific features don't translate directly to general retail — the detail level suits beauty but adds noise to other product types",
+            "Performance on lower-end mobile devices can degrade under heavy asset load",
+          ],
+          takeaway:
+            "Category-specific attribute surfacing is a cross-category conversion pattern — what Sephora does for ingredients maps directly to what Target needed for fashion: size, material, and fit notes on the listing card.",
+        },
+      ],
+      insights: [
+        "Personalisation at listing level consistently reduces navigation depth — users find relevant products faster when the list is already filtered to their interests",
+        "Size and colour confidence at listing level is the most cited reason users converted without opening individual product pages",
+        "Sorting hierarchy (new arrivals, price, bestsellers) covers the majority of use cases — the filter panel is for power users, not the default interaction",
+        "Attribute surfacing is a cross-category pattern — whether ingredients in beauty or material in fashion, the conversion impact is the same",
+      ],
+    },
+    journeyFlow: {
+      scenario:
+        "Mapping the end-to-end flow from app entry through to purchase — tracing how a user moves from the homepage into the PLP and the key decision branches the redesign had to serve.",
+      steps: [
+        {
+          tag:     "Entry",
+          label:   "App Homepage",
+          variant: "entry",
+        },
+        {
+          tag:     "Navigation",
+          label:   "Search or Category Browse",
+          detail:  "Users enter via: Search bar, Category navigation, Deals or Featured sections",
+          variant: "entry",
+        },
+        {
+          tag:     "Solution",
+          label:   "Product Listing Page",
+          detail:  "The redesigned PLP — the core uplift focus. Browsing, filtering, and product comparison all happen here.",
+          variant: "hub",
+        },
+      ],
+      branches: [
+        { label: "Quick Add",       sub: "Add to cart directly from the listing without opening the product detail page" },
+        { label: "See Similar",     sub: "Browse related products surfaced alongside the current listing" },
+        { label: "Wishlist",        sub: "Save items for later — visible and accessible across sessions" },
+        { label: "Product Detail",  sub: "Tap through to the full PDP for more information on a specific item" },
+        { label: "Checkout",        sub: "Basket and cart — triggered from Quick Add or after visiting the PDP" },
+      ],
+      outcome: "Item added to cart and checkout completed — via Quick Add from the listing or after reviewing the product detail page",
+    },
+    solutionFeatures: [
+      { label: "Product Images" },
+      { label: "Details — Description & Price" },
+      { label: "Ratings" },
+      { label: "Deals",           isNew: true },
+      { label: "Labels",          isNew: true },
+      { label: "Quick Add",       isNew: true },
+      { label: "See Similar",     isNew: true },
+      { label: "Wishlist" },
+      { label: "Colour Swatches", isNew: true },
+    ],
+    wireframes: [
+      { label: "Product Listing — Grid View",  src: "https://www.figma.com/api/mcp/asset/5ea79a4d-61c1-466c-84df-a7163bdae729" },
+      { label: "Slide-out Filter Panel",       src: "https://www.figma.com/api/mcp/asset/8a3e4709-41b4-4ec4-a509-cac947aa66cc" },
+      { label: "Quick Add Interaction",        src: "https://www.figma.com/api/mcp/asset/a872aca7-e76a-4dcd-b7ed-a010c87fdd09" },
+      { label: "See Similar Feature",          src: "https://www.figma.com/api/mcp/asset/0da9b0a7-c547-44ac-9267-378901562366" },
+    ],
+    userTesting: {
+      context:
+        "Moderated usability testing conducted with 8 mobile users based across Australia — covering browsing, filtering, wishlist, and purchase flows across the redesigned PLP.",
+      method:       "Moderated usability testing (mobile device, think-aloud protocol)",
+      participants: "8 mobile users based across Australia — mix of regular Target app shoppers and infrequent users",
+      duration:     "45 minutes per session",
+      tasks: [
+        { number: "01", task: "Browse the product listing page and find an item you'd consider buying" },
+        { number: "02", task: "Use the filter options to narrow results down to a specific size and colour" },
+        { number: "03", task: "Add a product directly to cart from the listing without tapping into the product detail page" },
+        { number: "04", task: "Use the See Similar feature to discover a related product" },
+        { number: "05", task: "Save an item to your wishlist, then navigate away and return to it" },
+      ],
+    },
+    userTestingFeedback: {
+      context:
+        "Findings from 8 moderated mobile sessions — patterns that directly influenced the filter simplification, card sizing, image swipe, and See Similar interactions in the final build.",
+      positive: [
+        "Users liked filtering by multiple criteria — colour, size, ratings — without leaving the listing page",
+        "Larger product cards gave users a better view of items, helping them shortlist faster at listing level",
+        "Swiping through product images on the listing card was immediately intuitive — adopted by all participants without prompting",
+        "See Similar surfaced adjacent products users hadn't considered — rated as one of the most useful additions in the session",
+      ],
+      improvements: [
+        "Too many visible filter options made it hard to focus — users defaulted to ignoring the panel rather than engaging with it",
+        "The slide-out filter entry point wasn't always easy to locate — placement needed to be more visually prominent",
+        "Some users felt overwhelmed by the number of swipeable images per card — a curated cap on assets per listing was recommended",
+        "Price comparison across similar products on the listing was absent — users wanted to scan relative pricing without tapping into each item",
+      ],
+      keyInsight:
+        "The filter panel was designed to be comprehensive, but users needed it to be decisive. The most effective filters — size and price — were buried under less-used options. Simplifying the initial view to two or three high-impact criteria resolved the friction immediately in follow-up testing.",
+    },
+    detailedDesign: {
+      context:   "Four high-fidelity screens from the final build — all shipped, tested in production, and deployed to the Target Australia app.",
+      frameType: "mobile",
+      screens: [
+        {
+          number:      "01",
+          label:       "Product Listing Page",
+          description: "Redesigned grid with larger cards, colour swatches, deal labels, and rating visibility. Quick Add surfaced as a primary affordance on each card.",
+          src:         "https://www.figma.com/api/mcp/asset/99ccd712-fb6f-4ce4-b811-cf99580d96f1",
+        },
+        {
+          number:      "02",
+          label:       "Filter Panel",
+          description: "Slide-out filter with simplified top-level options. Size and price defaulted above the fold — advanced filters accessible below.",
+          src:         "https://www.figma.com/api/mcp/asset/e94295a9-07d5-4ec3-bef9-b35706f0663c",
+        },
+        {
+          number:      "03",
+          label:       "Quick Add",
+          description: "A size selector opens directly over the listing card — cart without leaving the PLP. Single-tap from browse to basket.",
+          src:         "https://www.figma.com/api/mcp/asset/5910de19-fcf7-4ef7-ac78-25022e0d422f",
+        },
+        {
+          number:      "04",
+          label:       "See Similar",
+          description: "Related products surface inline on the PLP — contextual discovery without a separate search or navigation step.",
+          src:         "https://www.figma.com/api/mcp/asset/e4c38de6-9063-4489-80f0-1781728854fd",
+        },
+      ],
+      feedback: {
+        strengths: [
+          "Larger cards with swipeable images reduced the need to tap into PDPs — product quality assessable at listing level",
+          "Quick Add eliminated the main conversion barrier — users could go from browsing to cart in a single interaction",
+          "See Similar turned the PLP into a discovery layer — adjacent products surfaced at the moment users were already in browse mode",
+          "Colour swatches and deal labels at listing level gave users the context needed to shortlist without clicking through",
+          "All five new features shipped and deployed — validated with the product and engineering team within the agreed scope",
+        ],
+        considerations: [
+          "Filter simplification resulted in a two-tier pattern (primary + advanced) — secondary tier needs post-launch discoverability monitoring",
+          "Image swiping on listing cards increases asset load per page — performance on lower-end Android devices needs tracking",
+          "See Similar depends on a recommendation engine — the logic quality determines the feature's perceived value in production",
+          "Price comparison across listing cards remains an open gap — addressed in the brief for the next PLP iteration",
+        ],
+      },
+      ctaNote: "All five new features — Quick Add, See Similar, Colour Swatches, Deal Labels, and Wishlist — were scoped with the product team, built, tested, and deployed to the Target Australia app.",
+    },
+    nextSlug: "target-create-a-look",
   },
 ];
 
