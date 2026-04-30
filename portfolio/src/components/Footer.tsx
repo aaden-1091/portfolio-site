@@ -42,9 +42,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 font-medium">
               {[
-                { label: "LinkedIn",                 href: "https://www.linkedin.com/in/aaron-denetto/" },
-                { label: "Read.cv",                  href: "/cv" },
-                { label: "aaden.designs@gmail.com",  href: "mailto:aaden.designs@gmail.com" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/aaron-denetto/" },
+                { label: "Read.cv", href: "/cv" },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
