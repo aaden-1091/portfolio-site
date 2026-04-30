@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const { slug, title, company, description, year, image, tags } = project;
+  const { slug, title, description, image, tags } = project;
   const indexLabel = String(index + 1).padStart(2, "0");
 
   return (
@@ -27,6 +27,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           src={image}
           alt={title}
           fill
+          unoptimized={image.endsWith(".svg")}
           className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]"
           sizes="(max-width: 640px) 100vw, 50vw"
         />
@@ -51,10 +52,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <h3 className="text-xl font-bold tracking-tight text-accent group-hover:text-ink transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-xs font-semibold uppercase tracking-widest text-ink-light">
-          {company} · {year}
-        </p>
-        <div className="flex flex-wrap gap-2 mt-1">
+<div className="flex flex-wrap gap-2 mt-1">
           {tags.map((tag) => (
             <Tag key={tag} label={tag} />
           ))}

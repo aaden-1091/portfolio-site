@@ -1,0 +1,181 @@
+<svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Store background -->
+  <rect width="800" height="800" fill="#F5F9FF"/>
+  <!-- Ceiling strip -->
+  <rect x="0" y="0" width="800" height="115" fill="#E8F0FA"/>
+  <!-- Fluorescent lights -->
+  <rect x="95" y="38" width="130" height="15" rx="7" fill="white" opacity="0.9"/>
+  <ellipse cx="160" cy="46" rx="85" ry="28" fill="#FFFDE8" opacity="0.45"/>
+  <rect x="575" y="38" width="130" height="15" rx="7" fill="white" opacity="0.9"/>
+  <ellipse cx="640" cy="46" rx="85" ry="28" fill="#FFFDE8" opacity="0.45"/>
+
+  <!-- Floor -->
+  <rect x="0" y="682" width="800" height="118" fill="#E8E0D8"/>
+  <rect x="0" y="680" width="800" height="5" fill="#D4C8BC"/>
+  <!-- Floor tile lines -->
+  <line x1="200" y1="682" x2="200" y2="800" stroke="#DDD5CC" stroke-width="2"/>
+  <line x1="400" y1="682" x2="400" y2="800" stroke="#DDD5CC" stroke-width="2"/>
+  <line x1="600" y1="682" x2="600" y2="800" stroke="#DDD5CC" stroke-width="2"/>
+
+  <!-- LEFT SHELF UNIT -->
+  <rect x="0" y="115" width="148" height="568" fill="#D0C8C0"/>
+  <rect x="0" y="228" width="148" height="10" fill="#BCB4AC"/>
+  <rect x="0" y="374" width="148" height="10" fill="#BCB4AC"/>
+  <rect x="0" y="520" width="148" height="10" fill="#BCB4AC"/>
+  <!-- Left shelf products row 1 -->
+  <rect x="6" y="130" width="30" height="90" rx="5" fill="#D95A41"/>
+  <rect x="40" y="140" width="26" height="80" rx="5" fill="#4A90D9"/>
+  <rect x="70" y="134" width="30" height="86" rx="5" fill="#5BA058"/>
+  <rect x="104" y="144" width="26" height="76" rx="5" fill="#F5C842"/>
+  <!-- Row 2 -->
+  <rect x="6" y="244" width="30" height="80" rx="5" fill="#E88FAA"/>
+  <rect x="40" y="250" width="32" height="74" rx="5" fill="#8B6BA8"/>
+  <rect x="76" y="244" width="26" height="80" rx="5" fill="#4A90D9"/>
+  <rect x="106" y="250" width="30" height="74" rx="5" fill="#D95A41"/>
+  <!-- Row 3 -->
+  <rect x="6" y="388" width="32" height="82" rx="5" fill="#5BA058"/>
+  <rect x="42" y="393" width="26" height="77" rx="5" fill="#F5C842"/>
+  <rect x="72" y="390" width="30" height="80" rx="5" fill="#D95A41"/>
+  <rect x="106" y="394" width="30" height="76" rx="5" fill="#8B6BA8"/>
+  <!-- Row 4 -->
+  <rect x="6" y="534" width="28" height="112" rx="5" fill="#4A90D9"/>
+  <rect x="38" y="542" width="30" height="104" rx="5" fill="#E88FAA"/>
+  <rect x="72" y="536" width="26" height="110" rx="5" fill="#5BA058"/>
+  <rect x="102" y="540" width="34" height="106" rx="5" fill="#F5C842"/>
+
+  <!-- RIGHT SHELF UNIT -->
+  <rect x="652" y="115" width="148" height="568" fill="#D0C8C0"/>
+  <rect x="652" y="228" width="148" height="10" fill="#BCB4AC"/>
+  <rect x="652" y="374" width="148" height="10" fill="#BCB4AC"/>
+  <rect x="652" y="520" width="148" height="10" fill="#BCB4AC"/>
+  <!-- Right shelf products row 1 -->
+  <rect x="658" y="130" width="30" height="90" rx="5" fill="#8B6BA8"/>
+  <rect x="692" y="138" width="28" height="82" rx="5" fill="#D95A41"/>
+  <rect x="724" y="132" width="32" height="88" rx="5" fill="#4A90D9"/>
+  <rect x="760" y="142" width="28" height="78" rx="5" fill="#5BA058"/>
+  <!-- Row 2 -->
+  <rect x="658" y="244" width="32" height="80" rx="5" fill="#F5C842"/>
+  <rect x="694" y="250" width="28" height="74" rx="5" fill="#E88FAA"/>
+  <rect x="726" y="244" width="30" height="80" rx="5" fill="#D95A41"/>
+  <rect x="760" y="248" width="30" height="76" rx="5" fill="#8B6BA8"/>
+  <!-- Row 3 -->
+  <rect x="658" y="388" width="30" height="82" rx="5" fill="#4A90D9"/>
+  <rect x="692" y="392" width="32" height="78" rx="5" fill="#5BA058"/>
+  <rect x="728" y="386" width="28" height="84" rx="5" fill="#F5C842"/>
+  <rect x="760" y="390" width="28" height="80" rx="5" fill="#D95A41"/>
+  <!-- Row 4 -->
+  <rect x="658" y="534" width="30" height="112" rx="5" fill="#E88FAA"/>
+  <rect x="692" y="540" width="32" height="106" rx="5" fill="#4A90D9"/>
+  <rect x="728" y="534" width="28" height="112" rx="5" fill="#8B6BA8"/>
+  <rect x="760" y="540" width="28" height="106" rx="5" fill="#5BA058"/>
+
+  <!-- SHOPPING TROLLEY -->
+  <!-- Handle bar -->
+  <rect x="345" y="336" width="188" height="14" rx="7" fill="#8A8A8A"/>
+  <rect x="350" y="350" width="12" height="32" rx="5" fill="#9A9A9A"/>
+  <rect x="516" y="350" width="12" height="32" rx="5" fill="#9A9A9A"/>
+  <!-- Trolley basket frame -->
+  <rect x="278" y="378" width="328" height="258" rx="10" fill="none" stroke="#9A9A9A" stroke-width="10"/>
+  <!-- Basket mesh horizontal -->
+  <line x1="284" y1="428" x2="600" y2="428" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <line x1="284" y1="478" x2="600" y2="478" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <line x1="284" y1="528" x2="600" y2="528" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <line x1="284" y1="578" x2="600" y2="578" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <!-- Basket mesh vertical -->
+  <line x1="338" y1="383" x2="338" y2="628" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <line x1="398" y1="383" x2="398" y2="628" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <line x1="458" y1="383" x2="458" y2="628" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <line x1="518" y1="383" x2="518" y2="628" stroke="#9A9A9A" stroke-width="3.5" opacity="0.45"/>
+  <!-- Baby seat section -->
+  <rect x="296" y="376" width="146" height="186" rx="10" fill="#F5F5F5" stroke="#9A9A9A" stroke-width="8"/>
+  <rect x="304" y="384" width="130" height="170" rx="7" fill="#FFFBF5"/>
+  <!-- Seat divider bar -->
+  <rect x="296" y="460" width="146" height="9" fill="#9A9A9A"/>
+
+  <!-- BABY in seat -->
+  <rect x="326" y="390" width="74" height="72" rx="22" fill="#F5C842"/>
+  <!-- Baby head -->
+  <ellipse cx="363" cy="376" rx="33" ry="35" fill="#FBBF8A"/>
+  <!-- Baby hair wisps -->
+  <path d="M352 344 Q363 335 374 344" stroke="#2D1B0E" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M345 350 Q363 338 381 350" stroke="#2D1B0E" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.65"/>
+  <!-- Baby eyes -->
+  <circle cx="352" cy="374" r="5.5" fill="#2D1B0E"/>
+  <circle cx="374" cy="374" r="5.5" fill="#2D1B0E"/>
+  <circle cx="353" cy="371" r="1.5" fill="white"/>
+  <circle cx="375" cy="371" r="1.5" fill="white"/>
+  <!-- Baby smile -->
+  <path d="M353 386 Q363 395 373 386" stroke="#2D1B0E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Chubby cheeks -->
+  <circle cx="341" cy="381" r="9" fill="#FFB0A0" opacity="0.4"/>
+  <circle cx="385" cy="381" r="9" fill="#FFB0A0" opacity="0.4"/>
+  <!-- Baby arms -->
+  <ellipse cx="316" cy="414" rx="15" ry="10" fill="#FBBF8A" transform="rotate(-20 316 414)"/>
+  <ellipse cx="410" cy="414" rx="15" ry="10" fill="#FBBF8A" transform="rotate(20 410 414)"/>
+
+  <!-- Grocery items in basket -->
+  <rect x="454" y="508" width="56" height="96" rx="8" fill="#D95A41"/>
+  <rect x="460" y="516" width="44" height="9" rx="3" fill="white" opacity="0.45"/>
+  <rect x="514" y="518" width="50" height="86" rx="8" fill="#5BA058"/>
+  <rect x="454" y="455" width="42" height="48" rx="7" fill="#4A90D9" opacity="0.8"/>
+  <rect x="500" y="462" width="36" height="40" rx="6" fill="#F5C842"/>
+
+  <!-- Trolley wheels -->
+  <circle cx="308" cy="648" r="23" fill="#7A7A7A"/>
+  <circle cx="308" cy="648" r="14" fill="#5A5A5A"/>
+  <circle cx="308" cy="648" r="6" fill="#7A7A7A"/>
+  <circle cx="568" cy="648" r="23" fill="#7A7A7A"/>
+  <circle cx="568" cy="648" r="14" fill="#5A5A5A"/>
+  <circle cx="568" cy="648" r="6" fill="#7A7A7A"/>
+  <!-- Trolley base frame -->
+  <path d="M288 628 L294 648" stroke="#8A8A8A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M588 628 L578 648" stroke="#8A8A8A" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- MOTHER right of trolley -->
+  <!-- Legs -->
+  <path d="M598 622 L590 724" stroke="#5A3A1A" stroke-width="30" stroke-linecap="round"/>
+  <path d="M650 622 L660 724" stroke="#5A3A1A" stroke-width="30" stroke-linecap="round"/>
+  <!-- Shoes -->
+  <ellipse cx="585" cy="730" rx="23" ry="12" fill="#3A2010"/>
+  <ellipse cx="665" cy="730" rx="23" ry="12" fill="#3A2010"/>
+  <!-- Body -->
+  <rect x="573" y="408" width="114" height="224" rx="40" fill="#D95A41"/>
+  <!-- Neck -->
+  <rect x="620" y="374" width="27" height="42" rx="10" fill="#FBBF8A"/>
+  <!-- Head -->
+  <ellipse cx="633" cy="343" rx="54" ry="56" fill="#FBBF8A"/>
+  <!-- Hair -->
+  <path d="M580 322 Q585 262 633 262 Q681 262 686 322 Q668 292 633 288 Q598 292 580 322Z" fill="#2D1B0E"/>
+  <!-- Ponytail -->
+  <ellipse cx="702" cy="328" rx="13" ry="32" fill="#2D1B0E" transform="rotate(22 702 328)"/>
+  <!-- Ears -->
+  <ellipse cx="580" cy="345" rx="11" ry="14" fill="#F0AA72"/>
+  <ellipse cx="686" cy="345" rx="11" ry="14" fill="#F0AA72"/>
+  <!-- Earrings -->
+  <circle cx="580" cy="356" r="5.5" fill="#F5C842"/>
+  <circle cx="686" cy="356" r="5.5" fill="#F5C842"/>
+  <!-- Eyes -->
+  <circle cx="617" cy="339" r="7" fill="#2D1B0E"/>
+  <circle cx="649" cy="339" r="7" fill="#2D1B0E"/>
+  <circle cx="619" cy="336" r="2.5" fill="white"/>
+  <circle cx="651" cy="336" r="2.5" fill="white"/>
+  <!-- Smile -->
+  <path d="M618 359 Q633 372 648 359" stroke="#2D1B0E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Left arm on trolley handle -->
+  <path d="M573 455 Q528 432 472 380" stroke="#FBBF8A" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="469" cy="378" r="14" fill="#FBBF8A"/>
+  <!-- Right arm holding phone -->
+  <path d="M687 452 Q724 420 710 376" stroke="#FBBF8A" stroke-width="20" stroke-linecap="round"/>
+  <!-- Phone -->
+  <rect x="684" y="278" width="64" height="110" rx="12" fill="#222222"/>
+  <rect x="689" y="285" width="54" height="96" rx="8" fill="white"/>
+  <rect x="692" y="288" width="48" height="32" rx="4" fill="#4A90D9" opacity="0.25"/>
+  <rect x="695" y="325" width="38" height="6" rx="2" fill="#222222"/>
+  <rect x="695" y="335" width="30" height="5" rx="2" fill="#A0A0A0"/>
+  <rect x="695" y="347" width="22" height="14" rx="4" fill="#D95A41"/>
+  <circle cx="714" cy="390" r="14" fill="#FBBF8A"/>
+  <!-- Shopping bag on arm -->
+  <rect x="695" y="480" width="56" height="72" rx="8" fill="white" stroke="#E0D0C0" stroke-width="3"/>
+  <path d="M706 480 Q713 460 723 460 Q733 460 740 480" stroke="#E0D0C0" stroke-width="4" fill="none"/>
+  <rect x="706" y="495" width="34" height="5" rx="2" fill="#D95A41" opacity="0.45"/>
+</svg>

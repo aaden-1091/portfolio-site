@@ -194,6 +194,108 @@ export const caseStudies: CaseStudy[] = [
     },
     nextSlug: "private-media-ux-uplift",
   },
+  {
+    slug:        "private-media-ux-uplift",
+    title:       "UX Uplift & Pattern Library",
+    company:     "Private Media",
+    year:        "2024",
+    tags:        ["UX Design", "Design Systems"],
+    description: "Unify five publications under one pattern library.",
+    brief:
+      "Private Media runs four mastheads — Crikey, The Mandarin, SmartCompany, and Inc. Australia — each with its own audience, tone, and commercial model. The brief was to lift the UX across all four to meet current reader expectations, reduce friction in subscription flows, and build a shared pattern library that lets each publication move fast without reinventing the wheel.",
+    user:
+      "Mobile-first Australian news readers — checking headlines on a commute, following specific columnists, expecting the same frictionless experience they get from mainstream apps. Research conducted with 16 mobile users based across Australia.",
+    challenges: [
+      "Four publications with divergent design languages — a unified system had to feel coherent without flattening brand identity",
+      "Legacy CMS infrastructure with limited front-end flexibility, constraining what could be templated",
+      "Any design decision had to scale across multiple live editorial sites without disrupting daily publishing",
+      "Subscription and paywall flows built at different times, with no consistent logic across publications",
+      "Pattern library needed to serve both design and development teams with different tooling and workflows",
+    ],
+    objectives: [
+      "Revamp the UX across all four publications to meet 2024 reader expectations — not just aesthetic updates.",
+      "Deliver a mobile-optimised experience across every template: homepage, article, category, search, and account.",
+      "Reduce friction in the subscription and checkout flow to support commercial growth targets.",
+      "Build a scalable design system that works across publications without sacrificing brand differentiation.",
+      "Standardise components and interaction patterns in a shared pattern library for both design and engineering.",
+    ],
+    userNeeds: [
+      "Get to relevant content fast — without scrolling through noise.",
+      "Search that anticipates what you're looking for before finishing the query.",
+      "Browse by topic or section without losing the thread of what's relevant.",
+      "Create a free account without hitting a hard paywall as the first interaction.",
+      "Set reading preferences so the homepage reflects the content that actually matters.",
+      "Subscribe and complete checkout without re-entering details or hitting dead ends.",
+      "A reading experience that works with a screen reader and doesn't break on accessibility tools.",
+    ],
+    keyQuestions: [
+      "What news apps or publications do you use regularly, and what keeps you coming back?",
+      "Walk me through how you typically browse — do you start on the homepage, or come through search?",
+      "How do you find content on a topic you care about? What does that process actually look like?",
+      "Have you ever started a subscription and abandoned it? What stopped you?",
+      "How often do you hit a paywall, and what do you do when you do?",
+      "What's the most frustrating part of reading news on your phone?",
+      "If you could change one thing about how these publications work on mobile, what would it be?",
+    ],
+    wireframes: [
+      { label: "Homepage",                  src: "https://www.figma.com/api/mcp/asset/d6845d08-99b8-49d4-a789-6ce54defb1f4" },
+      { label: "Columnist Section",         src: "https://www.figma.com/api/mcp/asset/ee5f9116-af5b-40b7-b10a-0b00e727fb9c" },
+      { label: "Article Listing",           src: "https://www.figma.com/api/mcp/asset/a596d883-626a-4ba9-9e6a-9d6d8284c08f" },
+      { label: "Navigation Menu",           src: "https://www.figma.com/api/mcp/asset/adec5dd9-8ce7-4f66-af90-1a1c29b8918f" },
+      { label: "Category Article List",     src: "https://www.figma.com/api/mcp/asset/a976c94f-2c97-44c9-810f-ea1e8268a372" },
+      { label: "Opinion & Category Page",   src: "https://www.figma.com/api/mcp/asset/5f3568c8-c36d-4aa0-9a51-733dcbf9622b" },
+      { label: "Article Detail",            src: "https://www.figma.com/api/mcp/asset/9b4c355d-c51f-4df2-90b4-5231d5b76ab2" },
+      { label: "Account — Personal Details",src: "https://www.figma.com/api/mcp/asset/9355606d-197f-49f0-8719-5535538e6813" },
+      { label: "Search",                    src: "https://www.figma.com/api/mcp/asset/dd99b1e2-65fc-425c-8a6e-c8f352aecbcf" },
+    ],
+    detailedDesign: {
+      context: "High-fidelity screens across The Mandarin and SmartCompany — covering the key reader and subscriber journeys. Designs reflect publication-specific branding applied within the shared pattern library.",
+      screens: [
+        {
+          number:      "01",
+          label:       "Homepage — The Mandarin",
+          description: "Hero-led homepage with editorial hierarchy. Columnist profiles and category navigation above the fold — built from pattern library components, reskinned for The Mandarin's brand.",
+          src:         "https://www.figma.com/api/mcp/asset/da5a4d8d-a3e1-4dc0-ba4a-01416f230c8d",
+        },
+        {
+          number:      "02",
+          label:       "Article Page — SmartCompany",
+          description: "Article template with structured metadata, inline CTAs, and paywall positioning. Reading experience optimised for long-form business journalism on mobile.",
+          src:         "https://www.figma.com/api/mcp/asset/3afd1104-2366-4b41-97a8-48e897098a47",
+        },
+        {
+          number:      "03",
+          label:       "Subscription & Account",
+          description: "Subscriber dashboard with plan details and account controls. Account status and renewal date visible without digging through settings.",
+          src:         "https://www.figma.com/api/mcp/asset/a188a471-ccd1-41aa-b224-8791c199c075",
+        },
+        {
+          number:      "04",
+          label:       "Profile — SmartCompany",
+          description: "Reader profile with content preference controls and newsletter management. One place to manage the full subscription relationship.",
+          src:         "https://www.figma.com/api/mcp/asset/a9448c53-c011-464f-b47b-7507f26bb12d",
+        },
+      ],
+      feedback: {
+        strengths: [
+          "Pattern library approach means changes propagate across all four publications — one update, four sites",
+          "Mobile-first templates cover every core reader journey: browse, search, read, subscribe, manage account",
+          "Publication-level theming preserves brand differentiation without requiring separate component sets",
+          "Subscription flow redesign directly addresses the drop-off points identified in user research",
+          "Accessibility baked into the component spec from the start — not retrofitted after sign-off",
+        ],
+        considerations: [
+          "CMS integration constraints may limit how dynamically some components can be populated in production",
+          "Content preference controls depend on a personalisation backend not yet scoped at time of design",
+          "Paywall placement logic varies by publication — needs a unified ruleset before development handoff",
+          "Pattern library governance (ownership, versioning, deprecation) needs defining before the dev team adopts it",
+          "Checkout flow tested on standard subscription tiers — gift and corporate subscription edge cases not yet covered",
+        ],
+      },
+      ctaNote: "Designs cover the full reader and subscriber journey across mobile and desktop — discovery through to paywall, account creation, and ongoing management.",
+    },
+    nextSlug: "target-plp-uplift",
+  },
 ];
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {
