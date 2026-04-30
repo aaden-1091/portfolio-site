@@ -1,6 +1,6 @@
 {
-  "installCommand": "npm --prefix portfolio install",
-  "buildCommand": "npm --prefix portfolio run build",
-  "outputDirectory": "portfolio/.next",
-  "devCommand": "npm --prefix portfolio run dev"
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "devCommand": "npm run dev"
 }
