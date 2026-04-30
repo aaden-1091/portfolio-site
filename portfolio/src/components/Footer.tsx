@@ -30,7 +30,7 @@ export default function Footer() {
               About
             </h3>
             <p className="text-background/60 text-base leading-relaxed font-light">
-              Experience across e-commerce, SaaS, and design systems —
+              Experience across enterprise, e-commerce, SaaS, and design systems —
               documented here.
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 font-medium">
               {[
-                { label: "LinkedIn",                 href: "#" },
+                { label: "LinkedIn",                 href: "https://www.linkedin.com/in/aaron-denetto/" },
                 { label: "Read.cv",                  href: "#" },
                 { label: "aaden.designs@gmail.com",  href: "mailto:aaden.designs@gmail.com" },
               ].map(({ label, href }) => (
