@@ -41,24 +41,61 @@ export interface DetailedDesign {
   ctaNote:   string;
 }
 
+export interface CompetitorEntry {
+  name:       string;
+  category:   string;
+  strengths:  string[];
+  weaknesses: string[];
+  takeaway?:  string;
+}
+
+export interface CompetitorAnalysis {
+  context:     string;
+  competitors: CompetitorEntry[];
+  insights?:   string[];
+}
+
+export interface UserTestingTask {
+  number: string;
+  task:   string;
+}
+
+export interface UserTesting {
+  context:      string;
+  method:       string;
+  participants: string;
+  duration:     string;
+  tasks:        UserTestingTask[];
+}
+
+export interface UserTestingFeedback {
+  context:     string;
+  positive:    string[];
+  improvements:string[];
+  keyInsight?: string;
+}
+
 export interface CaseStudy {
-  slug:            string;
-  title:           string;
-  company:         string;
-  year:            string;
-  tags:            string[];
-  description:     string;
-  brief:           string;
-  user:            string;
-  challenges:      string[];
-  objectives:      string[];
-  userNeeds:       string[];
-  keyQuestions:    string[];
-  journeyFlow?:    JourneyFlow;
-  wireframes?:     Wireframe[];
-  detailedDesign?: DetailedDesign;
-  prototypeUrl?:   string;
-  nextSlug?:       string;
+  slug:                string;
+  title:               string;
+  company:             string;
+  year:                string;
+  tags:                string[];
+  description:         string;
+  brief:               string;
+  user:                string;
+  challenges:          string[];
+  objectives:          string[];
+  userNeeds:           string[];
+  keyQuestions:        string[];
+  competitorAnalysis?: CompetitorAnalysis;
+  journeyFlow?:        JourneyFlow;
+  wireframes?:         Wireframe[];
+  userTesting?:        UserTesting;
+  userTestingFeedback?:UserTestingFeedback;
+  detailedDesign?:     DetailedDesign;
+  prototypeUrl?:       string;
+  nextSlug?:           string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -237,6 +274,81 @@ export const caseStudies: CaseStudy[] = [
       "What's the most frustrating part of reading news on your phone?",
       "If you could change one thing about how these publications work on mobile, what would it be?",
     ],
+    competitorAnalysis: {
+      context:
+        "Four major digital mastheads were benchmarked against Private Media's publications — mapping where the market had raised the bar and where the opportunity to lead remained.",
+      competitors: [
+        {
+          name:     "The Guardian Australia",
+          category: "Quality / Independent",
+          strengths: [
+            "Contribution model removes the emotional friction of a hard paywall",
+            "Mobile-first reading experience — clean typography, minimal ad interruption",
+            "Columnist visibility and follow mechanics drive repeat engagement",
+            "Accessible navigation with predictable category structure",
+          ],
+          weaknesses: [
+            "Less category depth than commercial rivals — content can feel narrow",
+            "Subscription CTAs repeat across long articles and can feel persistent",
+          ],
+          takeaway:
+            "The contribution model lowers the barrier to subscription without sacrificing revenue. Decoupling the ask from the hard paywall was a design principle taken directly from this benchmark.",
+        },
+        {
+          name:     "Sydney Morning Herald / Nine Digital",
+          category: "Legacy Masthead",
+          strengths: [
+            "Large article library with deep category architecture",
+            "Columnist profiles and bylines drive repeat visits",
+            "Search surfaces archive content — not just recent articles",
+          ],
+          weaknesses: [
+            "Heavy ad load disrupts reading experience, especially on mobile",
+            "Homepage feels cluttered — hierarchy is hard to parse at speed",
+            "Newsletter management buried deep in account settings",
+          ],
+          takeaway:
+            "Category pages and columnist content are high-value retention tools — confirmed the priority placed on both in the pattern library. Newsletter discoverability became a direct fix.",
+        },
+        {
+          name:     "The Australian / News Corp",
+          category: "Business / Political",
+          strengths: [
+            "Clear subscription value proposition on pricing and plans page",
+            "Consistent desktop experience across all sections",
+            "Strong political and business coverage for a loyal audience",
+          ],
+          weaknesses: [
+            "Mobile UX is dated by 2023 standards — layouts feel ported from desktop",
+            "Hard paywall triggers at very shallow scroll depth, causing high bounce",
+            "Account creation is tightly coupled to subscription — friction at both steps",
+          ],
+          takeaway:
+            "Hard paywall at shallow scroll equals high bounce. Decoupling account creation from the subscription flow was a direct response to this pattern.",
+        },
+        {
+          name:     "ABC News",
+          category: "Public Broadcast",
+          strengths: [
+            "The benchmark for mobile readability and accessibility across all Australian news",
+            "Clean typography and whitespace — fast to scan on a small screen",
+            "No paywall friction — sets a high bar for perceived content value",
+          ],
+          weaknesses: [
+            "No subscription, personalisation, or columnist follow mechanics",
+            "Limited account functionality — no preference management",
+          ],
+          takeaway:
+            "ABC set the accessibility and readability baseline that the pattern library had to meet or exceed on mobile. Every article template was checked against this benchmark.",
+        },
+      ],
+      insights: [
+        "Paywall placement is the single biggest conversion friction point — the depth of first trigger matters more than the messaging",
+        "Columnist content drives repeat visits, yet no competitor had a strong columnist-follow mechanic — this was identified as a differentiation opportunity",
+        "Decoupling account creation from subscription consistently improves funnel completion across the competitive set",
+        "Mobile typography and ad load density are the two most cited pain points — both within design's control to address",
+      ],
+    },
     wireframes: [
       { label: "Homepage",                  src: "https://www.figma.com/api/mcp/asset/d6845d08-99b8-49d4-a789-6ce54defb1f4" },
       { label: "Columnist Section",         src: "https://www.figma.com/api/mcp/asset/ee5f9116-af5b-40b7-b10a-0b00e727fb9c" },
@@ -248,6 +360,38 @@ export const caseStudies: CaseStudy[] = [
       { label: "Account — Personal Details",src: "https://www.figma.com/api/mcp/asset/9355606d-197f-49f0-8719-5535538e6813" },
       { label: "Search",                    src: "https://www.figma.com/api/mcp/asset/dd99b1e2-65fc-425c-8a6e-c8f352aecbcf" },
     ],
+    userTesting: {
+      context:
+        "Moderated usability testing conducted with 16 mobile users across Australia — a mix of existing Private Media subscribers and readers who had never subscribed. Sessions were recorded and analysed across five structured tasks.",
+      method:       "Moderated usability testing (think-aloud protocol)",
+      participants: "16 mobile users — 8 existing subscribers, 8 lapsed or non-subscribers — across Melbourne, Sydney, and Brisbane",
+      duration:     "45–60 minutes per session",
+      tasks: [
+        { number: "01", task: "Find an article on a topic you care about using the search bar" },
+        { number: "02", task: "Navigate to the opinion section and find a columnist you'd want to follow" },
+        { number: "03", task: "Create a free account without committing to a subscription" },
+        { number: "04", task: "Complete a subscription checkout for the plan that suits you best" },
+        { number: "05", task: "Update your newsletter preferences from your account dashboard" },
+      ],
+    },
+    userTestingFeedback: {
+      context:
+        "Patterns surfaced from 16 moderated sessions — findings that directly shaped the final design decisions across search, paywall placement, and account flows.",
+      positive: [
+        "Navigation hierarchy required no prompting — 14 of 16 users found category sections without guidance",
+        "Columnist profiles drove stronger engagement than anticipated — 12 of 16 users explored columnist content beyond the assigned task",
+        "Free account creation completed successfully by 14 of 16 participants — clear visual separation from the subscription flow was the deciding factor",
+        "Mobile article reading experience rated positively across all sessions — typography scale and line length specifically cited",
+      ],
+      improvements: [
+        "Predictive search results appeared too slowly — 9 of 16 users abandoned the search input before results loaded",
+        "Paywall message triggered too early in article scroll — described as feeling 'baited and switched' by multiple participants",
+        "Subscription pricing page lacked clear tier differentiation — most users couldn't identify the right plan without assistance",
+        "Newsletter preferences were impossible to locate unaided — 8 of 16 users failed to complete the task",
+      ],
+      keyInsight:
+        "The biggest barrier to subscription wasn't price — it was unclear value communication at the moment of decision. Users didn't understand what they'd get that they weren't already getting for free. The redesigned pricing page addresses this directly.",
+    },
     detailedDesign: {
       context: "High-fidelity screens across The Mandarin and SmartCompany — covering the key reader and subscriber journeys. Designs reflect publication-specific branding applied within the shared pattern library.",
       screens: [

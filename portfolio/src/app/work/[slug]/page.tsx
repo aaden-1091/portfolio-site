@@ -2,7 +2,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { getCaseStudy, type JourneyFlow } from "@/data/caseStudies";
+import {
+  getCaseStudy,
+  type JourneyFlow,
+  type CompetitorAnalysis,
+  type UserTesting,
+  type UserTestingFeedback,
+} from "@/data/caseStudies";
 import { projects } from "@/data/projects";
 
 export async function generateStaticParams() {
@@ -143,6 +149,158 @@ function JourneyFlowDiagram({ flow }: { flow: JourneyFlow }) {
           <p className="font-bold text-base text-ink mt-1">{flow.outcome}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+function CompetitorAnalysisSection({ data }: { data: CompetitorAnalysis }) {
+  return (
+    <div className="flex flex-col gap-12">
+      <p className="pl-6 text-base text-ink-light leading-relaxed max-w-2xl">{data.context}</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {data.competitors.map((c) => (
+          <div
+            key={c.name}
+            className="bg-background border border-ink/8 rounded-sm flex flex-col gap-0 overflow-hidden"
+          >
+            {/* Card header */}
+            <div className="px-6 py-5 border-b border-ink/8 flex items-start justify-between gap-4">
+              <p className="font-bold text-base text-ink">{c.name}</p>
+              <span className="text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-sm bg-accent/10 text-accent shrink-0">
+                {c.category}
+              </span>
+            </div>
+
+            {/* Strengths + Weaknesses */}
+            <div className="grid grid-cols-2 divide-x divide-ink/8 flex-1">
+              <div className="px-5 py-5 flex flex-col gap-3">
+                <p className="text-xs font-bold uppercase tracking-widest text-ink-light mb-1">Strengths</p>
+                <ul className="flex flex-col gap-2.5">
+                  {c.strengths.map((s, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true" />
+                      <p className="text-sm leading-relaxed text-ink-light">{s}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="px-5 py-5 flex flex-col gap-3">
+                <p className="text-xs font-bold uppercase tracking-widest text-ink-light mb-1">Weaknesses</p>
+                <ul className="flex flex-col gap-2.5">
+                  {c.weaknesses.map((w, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ink/25 shrink-0" aria-hidden="true" />
+                      <p className="text-sm leading-relaxed text-ink-light">{w}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Takeaway */}
+            {c.takeaway && (
+              <div className="px-6 py-4 border-t border-ink/8 bg-accent/5">
+                <p className="text-xs font-bold uppercase tracking-widest text-accent mb-1.5">Takeaway</p>
+                <p className="text-sm leading-relaxed text-ink-light">{c.takeaway}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Insights row */}
+      {data.insights && data.insights.length > 0 && (
+        <div className="pl-6 flex flex-col gap-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-ink-light">Key Insights</p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {data.insights.map((insight, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true" />
+                <p className="text-sm leading-relaxed text-ink-light">{insight}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function UserTestingSection({ data }: { data: UserTesting }) {
+  return (
+    <div className="flex flex-col gap-10 pl-6">
+      <p className="text-base text-ink-light leading-relaxed max-w-2xl">{data.context}</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+        {/* Meta */}
+        <div className="flex flex-col gap-6">
+          {[
+            { label: "Method",       value: data.method },
+            { label: "Participants", value: data.participants },
+            { label: "Duration",     value: data.duration },
+          ].map(({ label, value }) => (
+            <div key={label} className="flex flex-col gap-1.5">
+              <p className="text-xs font-bold uppercase tracking-widest text-ink-light">{label}</p>
+              <p className="text-base leading-relaxed text-ink">{value}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Tasks */}
+        <div className="flex flex-col gap-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-ink-light">Tasks</p>
+          <ul className="flex flex-col gap-4">
+            {data.tasks.map((t) => (
+              <li key={t.number} className="flex items-start gap-4">
+                <span className="text-accent font-bold text-sm tabular-nums shrink-0 mt-0.5">{t.number}</span>
+                <p className="text-base leading-relaxed text-ink-light">{t.task}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function UserTestingFeedbackSection({ data }: { data: UserTestingFeedback }) {
+  return (
+    <div className="flex flex-col gap-10 pl-6">
+      <p className="text-base text-ink-light leading-relaxed max-w-2xl">{data.context}</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="flex flex-col gap-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-ink-light">What Worked</p>
+          <ul className="flex flex-col gap-4">
+            {data.positive.map((item, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden="true" />
+                <p className="text-sm leading-relaxed text-ink-light">{item}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-ink-light">What Needed Work</p>
+          <ul className="flex flex-col gap-4">
+            {data.improvements.map((item, i) => (
+              <li key={i} className="flex items-start gap-4">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-ink/25 shrink-0" aria-hidden="true" />
+                <p className="text-sm leading-relaxed text-ink-light">{item}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {data.keyInsight && (
+        <div className="border-l-2 border-accent pl-6 py-1">
+          <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Key Insight</p>
+          <p className="text-lg leading-relaxed text-ink font-medium">{data.keyInsight}</p>
+        </div>
+      )}
     </div>
   );
 }
@@ -310,6 +468,20 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
+        {/* ── Competitor Analysis ──────────────────────────────────────────── */}
+        {cs.competitorAnalysis && (
+          <section
+            className={`bg-[#f2f1ec] ${sectionPadding}`}
+            style={sectionSpacing}
+            aria-labelledby="cs-competitors"
+          >
+            <div className="max-w-5xl mx-auto flex flex-col gap-10">
+              <SectionHeading>Competitor Analysis</SectionHeading>
+              <CompetitorAnalysisSection data={cs.competitorAnalysis} />
+            </div>
+          </section>
+        )}
+
         {/* ── Journey Flow ─────────────────────────────────────────────────── */}
         {cs.journeyFlow && (
           <section
@@ -349,6 +521,34 @@ export default async function CaseStudyPage({
                   </div>
                 ))}
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── User Testing ─────────────────────────────────────────────────── */}
+        {cs.userTesting && (
+          <section
+            className={`bg-background ${sectionPadding}`}
+            style={sectionSpacing}
+            aria-labelledby="cs-user-testing"
+          >
+            <div className="max-w-5xl mx-auto flex flex-col gap-10">
+              <SectionHeading>User Testing</SectionHeading>
+              <UserTestingSection data={cs.userTesting} />
+            </div>
+          </section>
+        )}
+
+        {/* ── User Testing Feedback ─────────────────────────────────────────── */}
+        {cs.userTestingFeedback && (
+          <section
+            className={`bg-[#f2f1ec] ${sectionPadding}`}
+            style={sectionSpacing}
+            aria-labelledby="cs-testing-feedback"
+          >
+            <div className="max-w-5xl mx-auto flex flex-col gap-10">
+              <SectionHeading>Testing Feedback</SectionHeading>
+              <UserTestingFeedbackSection data={cs.userTestingFeedback} />
             </div>
           </section>
         )}
