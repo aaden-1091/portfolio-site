@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           src={image}
           alt={title}
           fill
-          unoptimized={image.endsWith(".svg")}
+          unoptimized={false}
           className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]"
           sizes="(max-width: 640px) 100vw, 50vw"
         />
