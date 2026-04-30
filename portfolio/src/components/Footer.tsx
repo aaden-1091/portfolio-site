@@ -1,4 +1,4 @@
-const socials = [
+const socials: { label: string; href: string; note?: string }[] = [
   { label: "LinkedIn", href: "#" },
   { label: "Read.cv",  href: "#" },
 ];
