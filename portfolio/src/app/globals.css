@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-background: #f7f6f3;
+  --color-surface:    #ebeae4;
+  --color-ink:        #1c1b1a;
+  --color-ink-light:  #4a4846;
+  --color-accent:     #d95a41;
+
+  /* Typography */
+  --font-sans: var(--font-open-sans), 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid font sizes */
+  --text-hero:    clamp(4rem, 8vw, 10rem);
+  --text-cta:     clamp(2.5rem, 5vw, 6rem);
+  --text-display: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-background);
+}
+
+/* ─── Utilities ──────────────────────────────────────────────────────────────── */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px currentColor;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  min-width: 200%;
+}
+
+.text-accent-fill {
+  background: #d95a41;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

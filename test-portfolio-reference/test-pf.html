@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Product Designer</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Newsreader', 'serif'],
+                    },
+                    colors: {
+                        background: '#f7f6f3',
+                        surface: '#ebeae4',
+                        ink: '#1c1b1a',
+                        inkLight: '#4a4846',
+                        accent: '#d95a41', 
+                    },
+                    fontSize: {
+                        'vw-xl': 'clamp(4rem, 8vw, 10rem)',
+                        'vw-lg': 'clamp(2.5rem, 5vw, 6rem)',
+                        'vw-md': 'clamp(1.5rem, 3vw, 3rem)',
+                    },
+                    spacing: {
+                        'section': 'clamp(4rem, 10vw, 8rem)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7f6f3;
+            color: #1c1b1a;
+        }
+        
+        .image-reveal {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        
+        .hover-trigger:hover .image-reveal {
+            transform: scale(1.03);
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px #1c1b1a;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+            min-width: 200%;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-ink selection:text-background flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full p-6 md:px-12 flex justify-between items-center z-50 mix-blend-difference text-white">
+        <a href="#" class="font-bold text-xl tracking-tighter hover:opacity-70 transition-opacity">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" fill="currentColor"/>
+                <path d="M16 8L8 16M8 8H16V16" stroke="black" stroke-width="2"/>
+            </svg>
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#work" class="hover:line-through transition-all">Work</a>
+            <a href="#about" class="hover:line-through transition-all">About</a>
+            <a href="#contact" class="hover:line-through transition-all">Contact</a>
+        </div>
+        <button class="md:hidden block uppercase text-sm font-medium tracking-widest">Menu</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-[1600px] mx-auto relative">
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-16 relative">
+            <div class="max-w-6xl">
+                <p class="uppercase tracking-widest text-sm font-semibold mb-6 flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    Available for new opportunities
+                </p>
+                <h1 class="font-extrabold leading-[0.9] tracking-tighter mb-8 lowercase" style="font-size: clamp(4rem, 8vw, 10rem);">
+                    Visualizing <br>
+                    <span class="text-outline">systems &</span> <br>
+                    human truths.
+                </h1>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-12 md:mt-24">
+                    <p class="text-xl md:text-2xl font-medium max-w-xl leading-relaxed text-[#4a4846]">
+                        I'm a Product Designer blurring the lines between structural logic and emotional resonance. Helping forward-thinking brands build tools that people actually want to use.
+                    </p>
+                    <div class="flex flex-col items-start md:items-end gap-2 text-sm font-medium uppercase tracking-widest text-[#4a4846]">
+                        <span>Currently based in</span>
+                        <span class="text-[#1c1b1a] flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            San Francisco, CA
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 text-xs font-bold uppercase tracking-widest">
+                <span>Scroll</span>
+                <div class="w-12 h-[1px] bg-[#1c1b1a]"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="px-6 md:px-12 py-[clamp(4rem,10vw,8rem)] border-t border-[#1c1b1a]/10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
+                <div class="md:col-span-4">
+                    <h2 class="text-3xl font-bold tracking-tight sticky top-24">The Context.</h2>
+                </div>
+                <div class="md:col-span-8 md:col-start-6 flex flex-col gap-12">
+                    <p class="text-2xl md:text-4xl font-serif leading-tight">
+                        Great design rarely happens entirely in front of a screen. The frameworks I use to solve complex product problems are often inspired by the physical world.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-[#1c1b1a]/10">
+                        <div class="flex flex-col gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#ebeae4] flex items-center justify-center text-xl">🔪</div>
+                            <h3 class="font-bold text-lg">Culinary Chemistry</h3>
+                            <p class="text-[#4a4846] text-sm leading-relaxed">
+                                I approach design systems like a chef approaches a kitchen. Mise en place, quality ingredients, and balancing flavors. Cooking teaches me about process, timing, and sensory feedback.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#ebeae4] flex items-center justify-center text-xl">🏔️</div>
+                            <h3 class="font-bold text-lg">Topography</h3>
+                            <p class="text-[#4a4846] text-sm leading-relaxed">
+                                Hiking requires wayfinding, endurance, and adapting to changing environments. It reminds me to keep user journeys clear, anticipate friction, and appreciate the view when a milestone is reached.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#ebeae4] flex items-center justify-center text-xl">🏢</div>
+                            <h3 class="font-bold text-lg">Urban Exploration</h3>
+                            <p class="text-[#4a4846] text-sm leading-relaxed">
+                                Getting lost in a new city is my favorite way to study urban planning and human behavior. Observing how people navigate physical spaces directly informs how I design digital navigation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Marquee -->
+        <section class="py-[clamp(4rem,10vw,8rem)] border-t border-[#1c1b1a]/10 overflow-hidden bg-[#ebeae4]">
+            <div class="px-6 md:px-12 mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-[#4a4846]">Cohorts & Collaborators</h2>
+            </div>
+            
+            <div class="relative flex overflow-x-hidden">
+                <div class="py-4 animate-marquee whitespace-nowrap flex space-x-16 items-center">
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Spotify</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Airbnb</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Stripe</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Acme Corp</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">HealthKit</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Fintech.io</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Framer</span>
+                    
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Spotify</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Airbnb</span>
+                    <span class="text-4xl md:text-6xl font-bold text-[#1c1b1a]/30 hover:text-[#1c1b1a] transition-colors cursor-default">Stripe</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="px-6 md:px-12 py-[clamp(4rem,10vw,8rem)] bg-[#f7f6f3]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <h2 class="font-extrabold leading-none tracking-tighter" style="font-size: clamp(1.5rem, 3vw, 3rem);">Selected <br> Archives.</h2>
+                
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-4 py-2 rounded-full border border-[#1c1b1a] bg-[#1c1b1a] text-[#f7f6f3] text-sm font-medium transition-colors">All Work</button>
+                    <button class="px-4 py-2 rounded-full border border-[#1c1b1a]/20 hover:border-[#1c1b1a] bg-transparent text-[#1c1b1a] text-sm font-medium transition-colors">Fintech</button>
+                    <button class="px-4 py-2 rounded-full border border-[#1c1b1a]/20 hover:border-[#1c1b1a] bg-transparent text-[#1c1b1a] text-sm font-medium transition-colors">Healthcare</button>
+                    <button class="px-4 py-2 rounded-full border border-[#1c1b1a]/20 hover:border-[#1c1b1a] bg-transparent text-[#1c1b1a] text-sm font-medium transition-colors">E-commerce</button>
+                </div>
+            </div>
+
+            <!-- Case Studies Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+                
+                <!-- Project 1 -->
+                <a href="#" class="group block hover-trigger flex flex-col">
+                    <div class="relative w-full aspect-[4/3] bg-[#ebeae4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" alt="Fintech App Dashboard" class="w-full h-full object-cover image-reveal">
+                        <div class="absolute inset-0 bg-[#1c1b1a]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                        <div class="absolute top-4 right-4 bg-[#f7f6f3] px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-sm z-10">Case Study</div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold tracking-tight mb-1 group-hover:text-accent transition-colors" style="--tw-text-opacity: 1; color: #d95a41;">Yield Platform</h3>
+                            <p class="text-[#4a4846] font-serif text-sm">Redefining wealth management for Gen-Z investors.</p>
+                        </div>
+                        <span class="text-sm font-medium text-[#4a4846]">2023</span>
+                    </div>
+                    <div class="mt-3 flex gap-2">
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">Fintech</span>
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">Product</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="#" class="group block hover-trigger flex flex-col">
+                    <div class="relative w-full aspect-[4/3] bg-[#ebeae4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2670&auto=format&fit=crop" alt="Healthcare Platform" class="w-full h-full object-cover image-reveal">
+                        <div class="absolute inset-0 bg-[#1c1b1a]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold tracking-tight mb-1 group-hover:text-accent transition-colors" style="--tw-text-opacity: 1; color: #d95a41;">Oura Health Core</h3>
+                            <p class="text-[#4a4846] font-serif text-sm">A unified dashboard for patient sleep data and recovery metrics.</p>
+                        </div>
+                        <span class="text-sm font-medium text-[#4a4846]">2023</span>
+                    </div>
+                    <div class="mt-3 flex gap-2">
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">Healthcare</span>
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">Web App</span>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="#" class="group block hover-trigger flex flex-col">
+                    <div class="relative w-full aspect-[4/3] bg-[#ebeae4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2670&auto=format&fit=crop" alt="Culinary App" class="w-full h-full object-cover image-reveal">
+                        <div class="absolute inset-0 bg-[#1c1b1a]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold tracking-tight mb-1 group-hover:text-accent transition-colors" style="--tw-text-opacity: 1; color: #d95a41;">Provisions</h3>
+                            <p class="text-[#4a4846] font-serif text-sm">Social commerce platform connecting local farmers directly to home chefs.</p>
+                        </div>
+                        <span class="text-sm font-medium text-[#4a4846]">2022</span>
+                    </div>
+                    <div class="mt-3 flex gap-2">
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">E-Commerce</span>
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">Mobile</span>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="#" class="group block hover-trigger flex flex-col">
+                    <div class="relative w-full aspect-[4/3] bg-[#ebeae4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop" alt="City Guide App" class="w-full h-full object-cover image-reveal">
+                        <div class="absolute inset-0 bg-[#1c1b1a]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold tracking-tight mb-1 group-hover:text-accent transition-colors" style="--tw-text-opacity: 1; color: #d95a41;">WanderOS</h3>
+                            <p class="text-[#4a4846] font-serif text-sm">Spatial design concepts for a mixed-reality urban navigation tool.</p>
+                        </div>
+                        <span class="text-sm font-medium text-[#4a4846]">2021</span>
+                    </div>
+                    <div class="mt-3 flex gap-2">
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">Concept</span>
+                        <span class="text-xs uppercase font-bold tracking-wider px-2 py-1 bg-[#ebeae4] text-[#4a4846] rounded-sm">AR/VR</span>
+                    </div>
+                </a>
+
+            </div>
+            
+            <div class="mt-16 flex justify-center">
+                <button class="group flex items-center gap-4 text-xl font-bold hover:text-[#d95a41] transition-colors">
+                    View full archive
+                    <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#1c1b1a] text-[#f7f6f3] px-6 md:px-12 py-24 md:py-32 flex flex-col justify-between min-h-[60vh]">
+        <div class="max-w-6xl w-full mx-auto">
+            <h2 class="font-extrabold leading-[0.9] tracking-tighter mb-12" style="font-size: clamp(2.5rem, 5vw, 6rem);">
+                Have a project? <br>
+                <a href="mailto:hello@example.com" class="hover:text-white transition-colors underline decoration-4 underline-offset-8" style="color: #d95a41;">Let's talk.</a>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mt-24 pt-12 border-t border-[#f7f6f3]/20">
+                <div class="md:col-span-2">
+                    <p class="text-[#f7f6f3]/60 font-serif text-lg max-w-sm">
+                        Currently accepting new freelance projects. If you're building something interesting, I'd love to hear about it over coffee (or a trail walk).
+                    </p>
+                </div>
+                <div>
+                    <h4 class="uppercase tracking-widest text-xs font-bold text-[#f7f6f3]/40 mb-6">Socials</h4>
+                    <ul class="space-y-4 font-medium">
+                        <li><a href="#" class="hover:text-[#d95a41] transition-colors flex justify-between group">LinkedIn <span class="opacity-0 group-hover:opacity-100 transition-opacity">↗</span></a></li>
+                        <li><a href="#" class="hover:text-[#d95a41] transition-colors flex justify-between group">Twitter / X <span class="opacity-0 group-hover:opacity-100 transition-opacity">↗</span></a></li>
+                        <li><a href="#" class="hover:text-[#d95a41] transition-colors flex justify-between group">Read.cv <span class="opacity-0 group-hover:opacity-100 transition-opacity">↗</span></a></li>
+                        <li><a href="#" class="hover:text-[#d95a41] transition-colors flex justify-between group">Instagram <span class="text-xs text-[#f7f6f3]/40 group-hover:text-[#d95a41]">(Cooking & Cities)</span></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="uppercase tracking-widest text-xs font-bold text-[#f7f6f3]/40 mb-6">Location</h4>
+                    <p class="font-medium">
+                        San Francisco, CA<br>
+                        PST (UTC -8)
+                    </p>
+                    <p class="text-sm text-[#f7f6f3]/40 mt-8">
+                        © 2024 Portfolio.<br>Designed & Built locally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
