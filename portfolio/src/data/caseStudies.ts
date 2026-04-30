@@ -107,7 +107,7 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug:        "readystudent-admin-portal",
+    slug:        "student-management-system-design",
     title:       "Student Management System Design",
     company:     "ReadyTech",
     year:        "2025",
@@ -236,10 +236,10 @@ export const caseStudies: CaseStudy[] = [
       },
       ctaNote: "The prototype covers the full submission flow — login through to TAFE handoff. Desktop-first, mid-fidelity.",
     },
-    nextSlug: "private-media-ux-uplift",
+    nextSlug: "ux-ui-uplift-pattern-library",
   },
   {
-    slug:        "private-media-ux-uplift",
+    slug:        "ux-ui-uplift-pattern-library",
     title:       "UX Uplift & Pattern Library",
     company:     "Private Media",
     year:        "2024",
@@ -446,10 +446,10 @@ export const caseStudies: CaseStudy[] = [
       },
       ctaNote: "Designs cover the full reader and subscriber journey across mobile and desktop — discovery through to paywall, account creation, and ongoing management.",
     },
-    nextSlug: "target-plp-uplift",
+    nextSlug: "app-plp-uplift",
   },
   {
-    slug:        "target-plp-uplift",
+    slug:        "app-plp-uplift",
     title:       "Product Listing Uplift",
     company:     "Target Australia",
     year:        "2023",
@@ -686,10 +686,10 @@ export const caseStudies: CaseStudy[] = [
       },
       ctaNote: "All five new features — Quick Add, See Similar, Colour Swatches, Deal Labels, and Wishlist — were scoped with the product team, built, tested, and deployed to the Target Australia app.",
     },
-    nextSlug: "target-create-a-look",
+    nextSlug: "create-a-look",
   },
   {
-    slug:        "target-create-a-look",
+    slug:        "create-a-look",
     title:       "Create a Look",
     company:     "Target Australia",
     year:        "2024",

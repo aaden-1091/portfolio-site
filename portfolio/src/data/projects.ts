@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id:          "1",
-    slug:        "readystudent-admin-portal",
+    slug:        "student-management-system-design",
     title:       "Student Management System Design",
     company:     "ReadyTech",
     description: "Redesign an admin portal to streamline workflows for educators and administrators.",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   },
   {
     id:          "2",
-    slug:        "private-media-ux-uplift",
+    slug:        "ux-ui-uplift-pattern-library",
     title:       "UX Uplift & Pattern Library",
     company:     "Private Media",
     description: "Unify five publications under one pattern library.",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   },
   {
     id:          "3",
-    slug:        "target-plp-uplift",
+    slug:        "app-plp-uplift",
     title:       "Product Listing Uplift",
     company:     "Target Australia",
     description: "Uplift the product listing experience for the Target Australia app.",
@@ -48,7 +48,7 @@ export const projects: Project[] = [
   },
   {
     id:          "4",
-    slug:        "target-create-a-look",
+    slug:        "create-a-look",
     title:       "Create a Look",
     company:     "Target Australia",
     description: "Design an outfit curation feature for the Target Australia app.",
