@@ -35,10 +35,11 @@ export interface DesignFeedback {
 }
 
 export interface DetailedDesign {
-  context:   string;
-  screens:   DetailedDesignScreen[];
-  feedback?: DesignFeedback;
-  ctaNote:   string;
+  context:    string;
+  frameType?: "browser" | "mobile";
+  screens:    DetailedDesignScreen[];
+  feedback?:  DesignFeedback;
+  ctaNote:    string;
 }
 
 export interface CompetitorEntry {
@@ -393,7 +394,8 @@ export const caseStudies: CaseStudy[] = [
         "The biggest barrier to subscription wasn't price — it was unclear value communication at the moment of decision. Users didn't understand what they'd get that they weren't already getting for free. The redesigned pricing page addresses this directly.",
     },
     detailedDesign: {
-      context: "High-fidelity screens across The Mandarin and SmartCompany — covering the key reader and subscriber journeys. Designs reflect publication-specific branding applied within the shared pattern library.",
+      context:   "High-fidelity screens across The Mandarin and SmartCompany — covering the key reader and subscriber journeys. Designs reflect publication-specific branding applied within the shared pattern library.",
+      frameType: "mobile",
       screens: [
         {
           number:      "01",

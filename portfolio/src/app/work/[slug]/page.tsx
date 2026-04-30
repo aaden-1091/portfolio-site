@@ -572,44 +572,92 @@ export default async function CaseStudyPage({
 
             {/* Screen gallery */}
             {cs.detailedDesign && cs.detailedDesign.screens.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {cs.detailedDesign.screens.map((screen) => (
-                  <div key={screen.label} className="flex flex-col gap-4">
-                    {/* Browser chrome frame */}
-                    <div className="rounded-sm overflow-hidden border border-background/10">
-                      <div className="bg-background/5 px-4 py-2.5 flex items-center gap-2 border-b border-background/10">
-                        <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
+              cs.detailedDesign.frameType === "mobile" ? (
+                /* ── Mobile phone frames — 4-up row ── */
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                  {cs.detailedDesign.screens.map((screen) => (
+                    <div key={screen.label} className="flex flex-col gap-4 items-center">
+                      {/* Phone shell */}
+                      <div className="w-full rounded-[2rem] border-[6px] border-background/20 bg-background/5 overflow-hidden flex flex-col shadow-[0_0_0_1px_rgba(255,255,255,0.06)]">
+                        {/* Status bar + dynamic island */}
+                        <div className="flex justify-center items-center pt-3 pb-2 bg-background/5">
+                          <div className="w-14 h-[18px] rounded-full bg-background/15 flex items-center justify-center gap-1.5">
+                            <span className="w-2 h-2 rounded-full bg-background/20" aria-hidden="true" />
+                            <span className="w-1 h-1 rounded-full bg-background/15" aria-hidden="true" />
+                          </div>
+                        </div>
+                        {/* Screen content */}
+                        <div className="aspect-[9/18] relative overflow-hidden bg-background/5">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={screen.src}
+                            alt={screen.label}
+                            className="absolute inset-0 w-full h-full object-cover object-top"
+                          />
+                        </div>
+                        {/* Home indicator */}
+                        <div className="flex justify-center items-center py-2.5 bg-background/5">
+                          <span className="w-16 h-[4px] rounded-full bg-background/20" aria-hidden="true" />
+                        </div>
                       </div>
-                      <div className="aspect-[16/10] bg-background/5 relative overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={screen.src}
-                          alt={screen.label}
-                          className="absolute inset-0 w-full h-full object-cover object-top"
-                        />
-                      </div>
-                    </div>
-                    {/* Screen label + description */}
-                    <div className="flex flex-col gap-1.5 pl-1">
-                      <div className="flex items-baseline gap-3">
-                        {screen.number && (
-                          <span className="text-accent font-bold text-sm tabular-nums shrink-0">
-                            {screen.number}
-                          </span>
-                        )}
-                        <p className="text-xs font-bold uppercase tracking-widest text-background/40">
-                          {screen.label}
+                      {/* Label + description below the phone */}
+                      <div className="flex flex-col gap-1.5 w-full text-center">
+                        <div className="flex items-baseline justify-center gap-2">
+                          {screen.number && (
+                            <span className="text-accent font-bold text-xs tabular-nums shrink-0">
+                              {screen.number}
+                            </span>
+                          )}
+                          <p className="text-xs font-bold uppercase tracking-widest text-background/40">
+                            {screen.label}
+                          </p>
+                        </div>
+                        <p className="text-xs leading-relaxed text-background/50">
+                          {screen.description}
                         </p>
                       </div>
-                      <p className="text-sm leading-relaxed text-background/60">
-                        {screen.description}
-                      </p>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                /* ── Browser chrome frames — 2-column grid ── */
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {cs.detailedDesign.screens.map((screen) => (
+                    <div key={screen.label} className="flex flex-col gap-4">
+                      <div className="rounded-sm overflow-hidden border border-background/10">
+                        <div className="bg-background/5 px-4 py-2.5 flex items-center gap-2 border-b border-background/10">
+                          <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
+                          <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
+                          <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
+                        </div>
+                        <div className="aspect-[16/10] bg-background/5 relative overflow-hidden">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={screen.src}
+                            alt={screen.label}
+                            className="absolute inset-0 w-full h-full object-cover object-top"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-1.5 pl-1">
+                        <div className="flex items-baseline gap-3">
+                          {screen.number && (
+                            <span className="text-accent font-bold text-sm tabular-nums shrink-0">
+                              {screen.number}
+                            </span>
+                          )}
+                          <p className="text-xs font-bold uppercase tracking-widest text-background/40">
+                            {screen.label}
+                          </p>
+                        </div>
+                        <p className="text-sm leading-relaxed text-background/60">
+                          {screen.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )
             )}
 
             {/* Feedback — strengths + considerations */}
