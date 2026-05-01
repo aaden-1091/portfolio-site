@@ -93,32 +93,6 @@ export default function CVPage() {
             </p>
           </div>
 
-          {/* Contact */}
-          <div className="bg-[#242424] rounded-lg px-4 py-4 flex flex-col gap-3 text-sm font-light shrink-0">
-            <a href="mailto:aarondenetto1010@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
-              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-              aarondenetto1010@gmail.com
-            </a>
-            <div className="flex items-center gap-2 text-white/80">
-              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
-              </svg>
-              0423 499 002
-            </div>
-            <a
-              href="https://www.linkedin.com/in/aaron-denetto/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-white/80 transition-colors"
-            >
-              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-              </svg>
-              linkedin.com/in/aaron-denetto/
-            </a>
-          </div>
         </div>
       </header>
 
