@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Tag from "@/components/ui/Tag";
 import type { Project } from "@/data/projects";
@@ -9,7 +8,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const { slug, title, description, image, tags } = project;
+  const { slug, title, description, tags } = project;
   const indexLabel = String(index + 1).padStart(2, "0");
 
   return (
@@ -21,19 +20,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Index number */}
       <span className="font-mono text-xs text-ink-light mb-2">{indexLabel}</span>
 
-      {/* Image */}
-      <div className="relative aspect-square bg-surface overflow-hidden mb-3">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          unoptimized={false}
-          className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-[1.03]"
-          sizes="(max-width: 640px) 100vw, 50vw"
-        />
-        {/* Tint lifts on hover */}
-        <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-500" />
-
+      {/* Placeholder */}
+      <div className="relative aspect-square bg-[#e8e8e8] overflow-hidden mb-3">
         {/* Slide-up CTA reveal */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
           <div className="translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-ink px-4 py-3">
