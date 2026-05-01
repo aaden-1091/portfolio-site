@@ -39,7 +39,7 @@ export interface DetailedDesign {
   frameType?: "browser" | "mobile";
   screens:    DetailedDesignScreen[];
   feedback?:  DesignFeedback;
-  ctaNote:    string;
+  ctaNote?:   string;
 }
 
 export interface CompetitorEntry {
@@ -101,7 +101,7 @@ export interface CaseStudy {
   userTesting?:         UserTesting;
   userTestingFeedback?: UserTestingFeedback;
   detailedDesign?:      DetailedDesign;
-  prototypeUrl?:        string;
+  prototypeLinks?:      { label: string; url: string }[];
   nextSlug?:            string;
 }
 
@@ -180,15 +180,15 @@ export const caseStudies: CaseStudy[] = [
       outcome: "Application(s) submitted to TAFE",
     },
     wireframes: [
-      { label: "College Intranet Homepage",    src: "https://www.figma.com/api/mcp/asset/1501af0c-3ca7-4a5e-9760-829e5568a566" },
-      { label: "Portal Login",                 src: "https://www.figma.com/api/mcp/asset/5839488f-a98c-4747-8973-7b097b49c89d" },
-      { label: "Portal Dashboard V1",          src: "https://www.figma.com/api/mcp/asset/b48eaf83-5898-440a-b5ed-9d246e0b8dd5" },
-      { label: "Portal Dashboard V2",          src: "https://www.figma.com/api/mcp/asset/e0c6b337-e031-48cd-9167-42d48443906a" },
-      { label: "Student Profiles",             src: "https://www.figma.com/api/mcp/asset/5b4e5bda-6bc7-4db4-8a2e-5eb6f04400b6" },
-      { label: "Individual Profile",           src: "https://www.figma.com/api/mcp/asset/e75b67f7-e7ff-403b-9f7e-cc552ecb8532" },
-      { label: "Bulk Application — Upload",    src: "https://www.figma.com/api/mcp/asset/dab1d4a4-94f2-43a3-9dcd-daa9b85f7477" },
-      { label: "Bulk Application — Review",    src: "https://www.figma.com/api/mcp/asset/b1fadf1e-b2d1-4c09-bbad-07e25e6755ed" },
-      { label: "Individual Application",       src: "https://www.figma.com/api/mcp/asset/507d06df-393c-4eb5-a1d7-8e62be59a7b8" },
+      { label: "College Intranet Homepage",    src: "/illustrations/cs1-wf-01.png" },
+      { label: "Portal Login",                 src: "/illustrations/cs1-wf-02.png" },
+      { label: "Portal Dashboard V1",          src: "/illustrations/cs1-wf-03.png" },
+      { label: "Portal Dashboard V2",          src: "/illustrations/cs1-wf-04.png" },
+      { label: "Student Profiles",             src: "/illustrations/cs1-wf-05.png" },
+      { label: "Individual Profile",           src: "/illustrations/cs1-wf-06.png" },
+      { label: "Bulk Application — Upload",    src: "/illustrations/cs1-wf-07.png" },
+      { label: "Bulk Application — Review",    src: "/illustrations/cs1-wf-08.png" },
+      { label: "Individual Application",       src: "/illustrations/cs1-wf-09.png" },
     ],
     detailedDesign: {
       context: "Four screens from the mid-fidelity prototype — desktop-first, covering the core submission flows. Close enough to final to test assumptions.",
@@ -236,6 +236,9 @@ export const caseStudies: CaseStudy[] = [
       },
       ctaNote: "The prototype covers the full submission flow — login through to TAFE handoff. Desktop-first, mid-fidelity.",
     },
+    prototypeLinks: [
+      { label: "View prototype", url: "https://www.figma.com/proto/b63FZUKXKvVZterDbHwhbj/Learning-Management-System?node-id=7-2790&p=f&viewport=-66%2C268%2C0.03&t=43CPhIc2uTCG80eL-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7%3A2790&page-id=0%3A1" },
+    ],
     nextSlug: "ux-ui-uplift-pattern-library",
   },
   {
@@ -357,15 +360,15 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     wireframes: [
-      { label: "Homepage",                  src: "https://www.figma.com/api/mcp/asset/d6845d08-99b8-49d4-a789-6ce54defb1f4" },
-      { label: "Columnist Section",         src: "https://www.figma.com/api/mcp/asset/ee5f9116-af5b-40b7-b10a-0b00e727fb9c" },
-      { label: "Article Listing",           src: "https://www.figma.com/api/mcp/asset/a596d883-626a-4ba9-9e6a-9d6d8284c08f" },
-      { label: "Navigation Menu",           src: "https://www.figma.com/api/mcp/asset/adec5dd9-8ce7-4f66-af90-1a1c29b8918f" },
-      { label: "Category Article List",     src: "https://www.figma.com/api/mcp/asset/a976c94f-2c97-44c9-810f-ea1e8268a372" },
-      { label: "Opinion & Category Page",   src: "https://www.figma.com/api/mcp/asset/5f3568c8-c36d-4aa0-9a51-733dcbf9622b" },
-      { label: "Article Detail",            src: "https://www.figma.com/api/mcp/asset/9b4c355d-c51f-4df2-90b4-5231d5b76ab2" },
-      { label: "Account — Personal Details",src: "https://www.figma.com/api/mcp/asset/9355606d-197f-49f0-8719-5535538e6813" },
-      { label: "Search",                    src: "https://www.figma.com/api/mcp/asset/dd99b1e2-65fc-425c-8a6e-c8f352aecbcf" },
+      { label: "Homepage",                  src: "/illustrations/cs2-wf-01.png" },
+      { label: "Columnist Section",         src: "/illustrations/cs2-wf-02.png" },
+      { label: "Article Listing",           src: "/illustrations/cs2-wf-03.png" },
+      { label: "Navigation Menu",           src: "/illustrations/cs2-wf-04.png" },
+      { label: "Category Article List",     src: "/illustrations/cs2-wf-05.png" },
+      { label: "Opinion & Category Page",   src: "/illustrations/cs2-wf-06.png" },
+      { label: "Article Detail",            src: "/illustrations/cs2-wf-07.png" },
+      { label: "Account — Personal Details",src: "/illustrations/cs2-wf-08.png" },
+      { label: "Search",                    src: "/illustrations/cs2-wf-09.png" },
     ],
     userTesting: {
       context:
@@ -407,25 +410,25 @@ export const caseStudies: CaseStudy[] = [
           number:      "01",
           label:       "Homepage — The Mandarin",
           description: "Hero-led homepage with editorial hierarchy. Columnist profiles and category navigation above the fold — built from pattern library components, reskinned for The Mandarin's brand.",
-          src:         "https://www.figma.com/api/mcp/asset/da5a4d8d-a3e1-4dc0-ba4a-01416f230c8d",
+          src:         "/illustrations/cs2-screen-01.png",
         },
         {
           number:      "02",
           label:       "Article Page — SmartCompany",
           description: "Article template with structured metadata, inline CTAs, and paywall positioning. Reading experience optimised for long-form business journalism on mobile.",
-          src:         "https://www.figma.com/api/mcp/asset/3afd1104-2366-4b41-97a8-48e897098a47",
+          src:         "/illustrations/cs2-screen-02.png",
         },
         {
           number:      "03",
           label:       "Subscription & Account",
           description: "Subscriber dashboard with plan details and account controls. Account status and renewal date visible without digging through settings.",
-          src:         "https://www.figma.com/api/mcp/asset/a188a471-ccd1-41aa-b224-8791c199c075",
+          src:         "/illustrations/cs2-screen-03.png",
         },
         {
           number:      "04",
           label:       "Profile — SmartCompany",
           description: "Reader profile with content preference controls and newsletter management. One place to manage the full subscription relationship.",
-          src:         "https://www.figma.com/api/mcp/asset/a9448c53-c011-464f-b47b-7507f26bb12d",
+          src:         "/illustrations/cs2-screen-04.png",
         },
       ],
       feedback: {
@@ -444,7 +447,6 @@ export const caseStudies: CaseStudy[] = [
           "Checkout flow tested on standard subscription tiers — gift and corporate subscription edge cases not yet covered",
         ],
       },
-      ctaNote: "Designs cover the full reader and subscriber journey across mobile and desktop — discovery through to paywall, account creation, and ongoing management.",
     },
     nextSlug: "app-plp-uplift",
   },
@@ -601,12 +603,12 @@ export const caseStudies: CaseStudy[] = [
       { label: "Colour Swatches", isNew: true },
     ],
     wireframes: [
-      { label: "Product Listing Page",         src: "https://www.figma.com/api/mcp/asset/99ccd712-fb6f-4ce4-b811-cf99580d96f1" },
-      { label: "Filter Panel",                 src: "https://www.figma.com/api/mcp/asset/e94295a9-07d5-4ec3-bef9-b35706f0663c" },
-      { label: "Quick Add",                    src: "https://www.figma.com/api/mcp/asset/5910de19-fcf7-4ef7-ac78-25022e0d422f" },
-      { label: "See Similar",                  src: "https://www.figma.com/api/mcp/asset/e4c38de6-9063-4489-80f0-1781728854fd" },
-      { label: "Browse Flow",                  src: "https://www.figma.com/api/mcp/asset/e50faf77-886d-4733-a4d5-c5c703d6fa6b" },
-      { label: "Category Navigation",          src: "https://www.figma.com/api/mcp/asset/b5a13f09-1782-4276-8720-cf1c6f649f8a" },
+      { label: "Product Listing Page",         src: "/illustrations/cs3-wf-01.png" },
+      { label: "Filter Panel",                 src: "/illustrations/cs3-wf-02.png" },
+      { label: "Quick Add",                    src: "/illustrations/cs3-wf-03.png" },
+      { label: "See Similar",                  src: "/illustrations/cs3-wf-04.png" },
+      { label: "Browse Flow",                  src: "/illustrations/cs3-wf-05.png" },
+      { label: "Category Navigation",          src: "/illustrations/cs3-wf-06.png" },
     ],
     userTesting: {
       context:
@@ -648,25 +650,25 @@ export const caseStudies: CaseStudy[] = [
           number:      "01",
           label:       "Product Listing Page",
           description: "Redesigned grid with larger cards, colour swatches, deal labels, and rating visibility. Quick Add surfaced as a primary affordance on each card.",
-          src:         "https://www.figma.com/api/mcp/asset/5ea79a4d-61c1-466c-84df-a7163bdae729",
+          src:         "/illustrations/cs3-screen-01.png",
         },
         {
           number:      "02",
           label:       "Filter Panel",
           description: "Slide-out filter with simplified top-level options. Size and price defaulted above the fold — advanced filters accessible below.",
-          src:         "https://www.figma.com/api/mcp/asset/8a3e4709-41b4-4ec4-a509-cac947aa66cc",
+          src:         "/illustrations/cs3-screen-02.png",
         },
         {
           number:      "03",
           label:       "Quick Add",
           description: "A size selector opens directly over the listing card — cart without leaving the PLP. Single-tap from browse to basket.",
-          src:         "https://www.figma.com/api/mcp/asset/a872aca7-e76a-4dcd-b7ed-a010c87fdd09",
+          src:         "/illustrations/cs3-screen-03.png",
         },
         {
           number:      "04",
           label:       "See Similar",
           description: "Related products surface inline on the PLP — contextual discovery without a separate search or navigation step.",
-          src:         "https://www.figma.com/api/mcp/asset/0da9b0a7-c547-44ac-9267-378901562366",
+          src:         "/illustrations/cs3-screen-04.png",
         },
       ],
       feedback: {
@@ -684,7 +686,6 @@ export const caseStudies: CaseStudy[] = [
           "Price comparison across listing cards remains an open gap — addressed in the brief for the next PLP iteration",
         ],
       },
-      ctaNote: "All five new features — Quick Add, See Similar, Colour Swatches, Deal Labels, and Wishlist — were scoped with the product team, built, tested, and deployed to the Target Australia app.",
     },
     nextSlug: "create-a-look",
   },
@@ -842,9 +843,9 @@ export const caseStudies: CaseStudy[] = [
       { label: "Desktop Web — Kids Flow",   isNew: true },
     ],
     wireframes: [
-      { label: "Homepage — Style Me Tile",     src: "https://www.figma.com/api/mcp/asset/0e87e5a7-e067-4165-b7b4-82ead18f283c" },
-      { label: "Style Me — Category Select",   src: "https://www.figma.com/api/mcp/asset/cdff2b7e-6350-48a1-9e2d-d0a3c5bf9e3b" },
-      { label: "Create a Look — Browse",       src: "https://www.figma.com/api/mcp/asset/fe209bfc-bb30-4590-a0f7-f425d19d4b61" },
+      { label: "Homepage — Style Me Tile",     src: "/illustrations/cs4-wf-01.png" },
+      { label: "Style Me — Category Select",   src: "/illustrations/cs4-wf-02.png" },
+      { label: "Create a Look — Browse",       src: "/illustrations/cs4-wf-03.png" },
     ],
     userTesting: {
       context:
@@ -886,25 +887,25 @@ export const caseStudies: CaseStudy[] = [
           number:      "01",
           label:       "Homepage",
           description: "Style Me tile surfaced as a primary homepage feature — discoverable without navigating into any category menus.",
-          src:         "https://www.figma.com/api/mcp/asset/ee8bb7bd-d964-492b-b96e-1c77e63892b1",
+          src:         "/illustrations/cs4-screen-01.png",
         },
         {
           number:      "02",
           label:       "Style Me",
           description: "'Shop from our most popular looks to find the perfect outfit' — editorial positioning that frames the feature as curation, not just browsing.",
-          src:         "https://www.figma.com/api/mcp/asset/7723d188-4285-43b9-80df-46a841cbd7d4",
+          src:         "/illustrations/cs4-screen-02.png",
         },
         {
           number:      "03",
           label:       "Create a Look — Bottoms",
           description: "Category tabs (Tops, Bottoms, Shoes, Jackets) let users build the look piece by piece from a single screen — no cross-category navigation required.",
-          src:         "https://www.figma.com/api/mcp/asset/c1c17d6c-99a4-4fff-b8d1-7f5717593c51",
+          src:         "/illustrations/cs4-screen-03.png",
         },
         {
           number:      "04",
           label:       "Add to Basket",
           description: "Inline size selection and Add to Basket — triggered from within the look view. Users confirm size and add to cart without leaving the look flow.",
-          src:         "https://www.figma.com/api/mcp/asset/64cca4f5-abbc-40c0-a7c7-521165275029",
+          src:         "/illustrations/cs4-screen-04.png",
         },
       ],
       feedback: {
@@ -924,6 +925,11 @@ export const caseStudies: CaseStudy[] = [
       },
       ctaNote: "Designs cover the full mobile look-building journey and a parallel desktop web flow for the Kids range. Handed off to the app and web product squads for scoping, prioritisation, and backlog integration.",
     },
+    prototypeLinks: [
+      { label: "View app prototype",  url: "https://www.figma.com/proto/YbIboH5MWpnIncRJGYnpAK/Target---Create-a-Look?node-id=1-7563&p=f&viewport=535%2C647%2C0.08&t=UTlvhq22AFUdlMnh-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A7563&page-id=0%3A1" },
+      { label: "View web prototype",  url: "https://www.figma.com/proto/DeZ6hcO2gJdmEr3sfDDnHW/Target---Look-Creation?node-id=1-3925&p=f&viewport=725%2C538%2C0.06&t=WN1e21wPC27Azm9f-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A3925&page-id=1%3A73" },
+    ],
+    nextSlug: "student-management-system-design",
   },
 ];
 

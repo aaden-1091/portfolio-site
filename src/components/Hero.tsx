@@ -7,7 +7,7 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="max-w-6xl">
-        <Badge status="available" label="Aaron de Netto · UX/UI Design Lead" />
+        <Badge status="available" label="Available for new opportunities" />
 
         <h1
           id="hero-heading"

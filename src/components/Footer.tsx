@@ -42,13 +42,14 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 font-medium">
               {[
-                { label: "LinkedIn", href: "https://www.linkedin.com/in/aaron-denetto/" },
-                { label: "Read.cv", href: "/cv" },
-              ].map(({ label, href }) => (
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/aaron-denetto/", external: true },
+                { label: "CV", href: "/cv", external: false },
+              ].map(({ label, href, external }) => (
                 <li key={label}>
                   <a
                     href={href}
                     className="flex justify-between items-center group hover:text-accent transition-colors"
+                    {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
                     <span>{label}</span>
                     <span className="opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
@@ -71,7 +72,7 @@ export default function Footer() {
               AEST (UTC +10)
             </p>
             <p className="text-sm text-background/40 mt-8">
-              © 2026 Aaron de Netto.
+              © {new Date().getFullYear()} Aaron de Netto.
               <br />
               Designed &amp; built locally.
             </p>

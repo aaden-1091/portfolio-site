@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import Button from "@/components/ui/Button";
 import { projects } from "@/data/projects";
@@ -20,7 +21,7 @@ export default function WorkGrid() {
           Selected <span className="block">Archives.</span>
         </h2>
         <p className="text-xs font-bold uppercase tracking-widest text-ink-light">
-          04 case studies
+          {String(projects.length).padStart(2, "0")} case studies
         </p>
       </div>
 
@@ -33,9 +34,11 @@ export default function WorkGrid() {
 
       {/* Archive CTA */}
       <div className="mt-12 flex justify-start">
-        <Button variant="ghost" arrow className="group text-xl font-bold">
-          View full archive
-        </Button>
+        <Link href="#work">
+          <Button variant="ghost" arrow className="group text-xl font-bold">
+            View full archive
+          </Button>
+        </Link>
       </div>
     </section>
   );

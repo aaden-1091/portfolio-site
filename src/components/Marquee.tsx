@@ -3,9 +3,9 @@ const collaborators = [
   "ASIC", "Sixt", "SES Australia", "Private Media", "RACGP",
 ];
 
-export default function Marquee() {
-  const doubled = [...collaborators, ...collaborators];
+const doubled = [...collaborators, ...collaborators];
 
+export default function Marquee() {
   return (
     <section
       className="bg-surface border-t border-ink/10 overflow-hidden"
@@ -18,11 +18,11 @@ export default function Marquee() {
         </h2>
       </div>
 
-      <div className="relative flex overflow-x-hidden" aria-hidden="true">
-        <div className="flex items-center space-x-16 py-4 animate-marquee whitespace-nowrap">
+      <div className="relative overflow-hidden" aria-hidden="true">
+        <div className="flex items-center gap-16 py-4 animate-marquee whitespace-nowrap w-max">
           {doubled.map((name, i) => (
             <span
-              key={`${name}-${i}`}
+              key={i}
               className="text-4xl md:text-6xl font-bold text-ink/20 hover:text-ink transition-colors duration-300 cursor-default select-none"
             >
               {name}

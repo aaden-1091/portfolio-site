@@ -34,14 +34,17 @@ export async function generateMetadata({
 function SectionHeading({
   children,
   light,
+  id,
 }: {
   children: React.ReactNode;
   light?: boolean;
+  id?: string;
 }) {
   return (
     <div className="flex items-start gap-5">
       <div className="w-1 self-stretch bg-accent rounded-full shrink-0" aria-hidden="true" />
       <h2
+        id={id}
         className={`font-extrabold leading-tight tracking-tight ${light ? "text-background" : "text-ink"}`}
         style={{ fontSize: "clamp(1.75rem, 3.5vw, 3rem)", letterSpacing: "-0.04em" }}
       >
@@ -403,7 +406,7 @@ export default async function CaseStudyPage({
           aria-labelledby="cs-brief"
         >
           <div className="max-w-5xl mx-auto flex flex-col gap-12">
-            <SectionHeading>The Brief</SectionHeading>
+            <SectionHeading id="cs-brief">The Brief</SectionHeading>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 pl-6">
               <div className="flex flex-col gap-3">
                 <p className="text-xs font-bold uppercase tracking-widest text-ink-light">What</p>
@@ -424,7 +427,7 @@ export default async function CaseStudyPage({
           aria-labelledby="cs-challenges"
         >
           <div className="max-w-5xl mx-auto flex flex-col gap-10">
-            <SectionHeading>Potential Challenges</SectionHeading>
+            <SectionHeading id="cs-challenges">Potential Challenges</SectionHeading>
             <ul className="flex flex-col gap-5 pl-6">
               {cs.challenges.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -443,7 +446,7 @@ export default async function CaseStudyPage({
           aria-labelledby="cs-objectives"
         >
           <div className="max-w-5xl mx-auto flex flex-col gap-10">
-            <SectionHeading>Objectives & Goals</SectionHeading>
+            <SectionHeading id="cs-objectives">Objectives & Goals</SectionHeading>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pl-6">
               {cs.objectives.map((obj, i) => (
                 <div key={i} className="flex flex-col gap-4">
@@ -464,7 +467,7 @@ export default async function CaseStudyPage({
           aria-labelledby="cs-user-needs"
         >
           <div className="max-w-5xl mx-auto flex flex-col gap-10">
-            <SectionHeading>User Needs</SectionHeading>
+            <SectionHeading id="cs-user-needs">User Needs</SectionHeading>
             <ul className="flex flex-col gap-5 pl-6">
               {cs.userNeeds.map((need, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -483,7 +486,7 @@ export default async function CaseStudyPage({
           aria-labelledby="cs-questions"
         >
           <div className="max-w-5xl mx-auto flex flex-col gap-10">
-            <SectionHeading>Key Questions</SectionHeading>
+            <SectionHeading id="cs-questions">Key Questions</SectionHeading>
             <ul className="flex flex-col gap-6 pl-6">
               {cs.keyQuestions.map((q, i) => (
                 <li key={i} className="flex items-start gap-5">
@@ -505,7 +508,7 @@ export default async function CaseStudyPage({
             aria-labelledby="cs-competitors"
           >
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
-              <SectionHeading>Competitor Analysis</SectionHeading>
+              <SectionHeading id="cs-competitors">Competitor Analysis</SectionHeading>
               <CompetitorAnalysisSection data={cs.competitorAnalysis} />
             </div>
           </section>
@@ -519,7 +522,7 @@ export default async function CaseStudyPage({
             aria-labelledby="cs-journey"
           >
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
-              <SectionHeading>Journey Flow</SectionHeading>
+              <SectionHeading id="cs-journey">Journey Flow</SectionHeading>
               <JourneyFlowDiagram flow={cs.journeyFlow} />
             </div>
           </section>
@@ -533,7 +536,7 @@ export default async function CaseStudyPage({
             aria-labelledby="cs-solution"
           >
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
-              <SectionHeading>Solution</SectionHeading>
+              <SectionHeading id="cs-solution">Solution</SectionHeading>
               <SolutionFeaturesSection features={cs.solutionFeatures} />
             </div>
           </section>
@@ -547,19 +550,17 @@ export default async function CaseStudyPage({
             aria-labelledby="cs-wireframes"
           >
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
-              <SectionHeading>Lo-Fidelity Wireframes</SectionHeading>
+              <SectionHeading id="cs-wireframes">Lo-Fidelity Wireframes</SectionHeading>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pl-6">
                 {cs.wireframes.map((frame) => (
                   <div key={frame.label} className="flex flex-col gap-3">
                     <p className="text-xs font-bold uppercase tracking-widest text-ink-light">
                       {frame.label}
                     </p>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <ScreenImage
                       src={frame.src}
                       alt={frame.label}
                       className="w-full border border-ink/10 bg-background object-cover"
-                      loading="lazy"
                     />
                   </div>
                 ))}
@@ -576,7 +577,7 @@ export default async function CaseStudyPage({
             aria-labelledby="cs-user-testing"
           >
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
-              <SectionHeading>User Testing</SectionHeading>
+              <SectionHeading id="cs-user-testing">User Testing</SectionHeading>
               <UserTestingSection data={cs.userTesting} />
             </div>
           </section>
@@ -590,7 +591,7 @@ export default async function CaseStudyPage({
             aria-labelledby="cs-testing-feedback"
           >
             <div className="max-w-5xl mx-auto flex flex-col gap-10">
-              <SectionHeading>Testing Feedback</SectionHeading>
+              <SectionHeading id="cs-testing-feedback">Testing Feedback</SectionHeading>
               <UserTestingFeedbackSection data={cs.userTestingFeedback} />
             </div>
           </section>
@@ -733,21 +734,32 @@ export default async function CaseStudyPage({
               </div>
             )}
 
-            {/* CTA row */}
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-6 border-t border-background/10">
-              <p className="text-background/40 text-sm leading-relaxed max-w-sm">
-                {cs.detailedDesign?.ctaNote ?? "Prototype available on request."}
-              </p>
-              <a
-                href={`mailto:aaden.designs@gmail.com?subject=Prototype Access Request — ${cs.title}`}
-                className="inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest bg-background text-ink hover:bg-accent hover:text-background transition-all duration-200 shrink-0"
-              >
-                Request access to review prototype
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
+            {/* CTA row — only rendered when there is a note or prototype links */}
+            {(cs.detailedDesign?.ctaNote || cs.prototypeLinks?.length) && (
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-6 border-t border-background/10">
+                {cs.detailedDesign?.ctaNote && (
+                  <p className="text-background/40 text-sm leading-relaxed max-w-sm">
+                    {cs.detailedDesign.ctaNote}
+                  </p>
+                )}
+                <div className="flex flex-wrap gap-3 shrink-0">
+                  {cs.prototypeLinks?.map(({ label, url }) => (
+                    <a
+                      key={label}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest bg-background text-ink hover:bg-accent hover:text-background transition-all duration-200"
+                    >
+                      {label}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
 
           </div>
         </section>

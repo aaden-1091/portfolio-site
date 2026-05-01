@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+"use client";
 
-export const metadata: Metadata = {
-  title: "CV — Aaron de Netto",
-  description: "Professional journey, accomplishments, and skills of Aaron de Netto, UX UI Design Lead.",
-};
+import Link from "next/link";
 
 const PHOTO_URL = "https://www.figma.com/api/mcp/asset/092c98ce-e01f-4dd6-a12a-6b5ca90e3b9b";
 
@@ -80,6 +76,9 @@ export default function CVPage() {
               src={PHOTO_URL}
               alt="Aaron de Netto"
               className="w-32 h-32 rounded-full object-cover bg-[#242424]"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = "/illustrations/screen-placeholder.svg";
+              }}
             />
           </div>
 
@@ -134,7 +133,7 @@ export default function CVPage() {
                 <BulletList items={[
                   "Engage with stakeholders to understand their business goals, user needs, and requirements.",
                   "Translate stakeholder requirements into effective UX/UI strategies and product solutions that align with the key metrics and KPI deliverables.",
-                  "Create wireframes, prototypes, and design mockups to visualise proposed solutions gathering feedback along the way. Collaborate with product and engineering teams to ensure seamless integration of design elements and functionalities dependant on platforms requirements.",
+                  "Create wireframes, prototypes, and design mockups to visualise proposed solutions gathering feedback along the way. Collaborate with product and engineering teams to ensure seamless integration of design elements and functionalities dependent on platforms requirements.",
                   "Conduct usability testing and gather user feedback to iterate and refine designs. Perform quality assurance checks to ensure deliverables meet required design principles (WCAG), and the business requirements.",
                   "Manage project timelines, budgets, and resources effectively to deliver projects on time and within scope at the highest level.",
                   "Support and mentor UX and Product Designers at all levels, helping them grow through guidance, feedback, and collaboration.",
