@@ -1,0 +1,301 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "CV — Aaron de Netto",
+  description: "Professional journey, accomplishments, and skills of Aaron de Netto, UX UI Design Lead.",
+};
+
+const PHOTO_URL = "https://www.figma.com/api/mcp/asset/092c98ce-e01f-4dd6-a12a-6b5ca90e3b9b";
+
+function CompanyBadge({ name, color }: { name: string; color: string }) {
+  return (
+    <span
+      className="inline-flex items-center px-2 py-1 rounded-[2px] text-xs font-semibold shrink-0"
+      style={{ backgroundColor: color, color: color === "#433f3f" ? "#fff" : "#1e1e1e" }}
+    >
+      {name}
+    </span>
+  );
+}
+
+function RoleHeader({
+  company,
+  badgeColor,
+  title,
+  years,
+}: {
+  company: string;
+  badgeColor: string;
+  title: string;
+  years: string;
+}) {
+  return (
+    <div className="flex flex-wrap gap-2 items-center">
+      <CompanyBadge name={company} color={badgeColor} />
+      <div className="flex flex-1 justify-between items-center gap-2 min-w-0">
+        <span className="font-semibold text-[#1e1e1e] text-base leading-tight">{title}</span>
+        <span className="font-semibold text-[#1e1e1e] text-sm whitespace-nowrap shrink-0">{years}</span>
+      </div>
+    </div>
+  );
+}
+
+function BulletList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2 list-disc list-outside ml-4">
+      {items.map((item, i) => (
+        <li key={i} className="text-xs text-black leading-relaxed">
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Divider() {
+  return <hr className="border-t border-[#e0e0e0]" />;
+}
+
+function Pill({ label }: { label: string }) {
+  return (
+    <span className="bg-[#e9e9e9] text-[#1e1e1e] text-xs font-semibold px-3 py-2 rounded-full whitespace-nowrap">
+      {label}
+    </span>
+  );
+}
+
+export default function CVPage() {
+  return (
+    <div className="bg-[#f3f3f3] min-h-screen">
+
+      {/* Header */}
+      <header className="bg-[#1e1e1e] text-white px-6 md:px-12 py-10">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-start md:items-center">
+
+          {/* Photo */}
+          <div className="shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={PHOTO_URL}
+              alt="Aaron de Netto"
+              className="w-32 h-32 rounded-full object-cover bg-[#242424]"
+            />
+          </div>
+
+          {/* Name + title */}
+          <div className="flex-1">
+            <h1 className="font-normal text-3xl md:text-4xl leading-[1.1] mb-1">
+              Aaron<br />de Netto.
+            </h1>
+            <p className="text-sm font-light text-white/70">
+              User Experience &amp; Interface Design Lead
+            </p>
+          </div>
+
+        </div>
+      </header>
+
+      {/* Back nav */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 pt-6">
+        <Link href="/" className="text-xs font-semibold uppercase tracking-widest text-[#888] hover:text-[#1e1e1e] transition-colors">
+          ← Back to portfolio
+        </Link>
+      </div>
+
+      {/* Main content */}
+      <main className="max-w-5xl mx-auto px-6 md:px-12 py-6 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          {/* ── Left column ── */}
+          <div className="flex flex-col gap-4">
+
+            {/* Professional Journey */}
+            <section className="bg-white rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+              <h2 className="font-semibold text-[#1e1e1e] text-2xl">Professional Journey.</h2>
+
+              {/* ReadyTech */}
+              <div className="flex flex-col gap-3">
+                <RoleHeader company="ReadyTech" badgeColor="#a0e4a0" title="Senior Designer" years="2025 – Present" />
+                <BulletList items={[
+                  "Work within a cross-functional product squad focused within the education sector of ReadyTech on admissions as part of a SaaS Student Management System.",
+                  "Lead design across complex problem spaces, from defining opportunities through discovery to delivering validated, dev-ready solutions.",
+                  "Conduct usability testing and gather user feedback to iterate and refine designs. Perform quality assurance checks to ensure deliverables meet required design principles (WCAG), and the business requirements.",
+                  "Facilitate workshops, align stakeholders, and translate insights into clear design direction.",
+                  "Support and mentor UX and Product Designers at all levels, helping them grow through guidance, feedback, and collaboration.",
+                ]} />
+              </div>
+
+              <Divider />
+
+              {/* Bastion */}
+              <div className="flex flex-col gap-3">
+                <RoleHeader company="Bastion" badgeColor="#433f3f" title="UX – UI Design Lead" years="2023 – 2025" />
+                <BulletList items={[
+                  "Engage with stakeholders to understand their business goals, user needs, and requirements.",
+                  "Translate stakeholder requirements into effective UX/UI strategies and product solutions that align with the key metrics and KPI deliverables.",
+                  "Create wireframes, prototypes, and design mockups to visualise proposed solutions gathering feedback along the way. Collaborate with product and engineering teams to ensure seamless integration of design elements and functionalities dependant on platforms requirements.",
+                  "Conduct usability testing and gather user feedback to iterate and refine designs. Perform quality assurance checks to ensure deliverables meet required design principles (WCAG), and the business requirements.",
+                  "Manage project timelines, budgets, and resources effectively to deliver projects on time and within scope at the highest level.",
+                  "Support and mentor UX and Product Designers at all levels, helping them grow through guidance, feedback, and collaboration.",
+                  "Conduct workshops, training sessions, and knowledge sharing activities with clients and internal teams.",
+                ]} />
+              </div>
+
+              <Divider />
+
+              {/* Target Australia — Manager */}
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3">
+                  <RoleHeader company="Target Australia" badgeColor="#f5dcdc" title="eCommerce Design Manager" years="2022 – 2023" />
+                  <BulletList items={[
+                    "Lead and manage a team consisting of UX Designers, Content Designers, UX Researchers, and Front-end Developers providing mentorship and guidance to ensure alignment with Target business goals and professional growth.",
+                    "Drive decisions across all digital touchpoints (website and application) based on data-driven insights and analytics working closely with Consumer Insights team.",
+                    "Collaborate on the CRO program to optimise conversion rates across digital platforms with a key focus on increasing AOV as well as overall sales.",
+                    "Collaborate closely with product management and technology teams to identify, prioritise and implement enhancements based on user feedback and business objectives.",
+                    "Work with marketing teams to align seasonal campaigns and promotions with UX/UI strategies to maximise effectiveness whilst also ensuring alignment to the Target Brand.",
+                    "Drive innovation within the team through experimentation and adoption of new tools or methodologies to enhance digital experiences.",
+                  ]} />
+                </div>
+
+                {/* Target Australia — Lead (no badge, same company) */}
+                <div className="flex flex-col gap-3">
+                  <div className="flex justify-between items-center gap-2">
+                    <span className="font-semibold text-[#1e1e1e] text-base leading-tight">UX – UI Design Lead</span>
+                    <span className="font-semibold text-[#1e1e1e] text-sm whitespace-nowrap shrink-0">2020 – 2022</span>
+                  </div>
+                  <BulletList items={[
+                    "Following UXD and Human centred design principles throughout conception to execution, owning and delivering intuitive, efficient, and delightful experiences for all solutions.",
+                    "Conduct user journey and empathy mapping to identify customer friction points within the online experience which in turn plays a part in formulating the product strategy.",
+                    "Create wireframes, prototypes, and design mockups to visualise proposed solutions and gather feedback.",
+                    "Validate and iterate on product solutions to determine viability before progressing to detailed design through feedback sessions, usability testing, A/B, and live testing.",
+                    "Adapt product experiences to different audiences based on their needs and the devices they used. This includes responsive design, accessibility considerations and personalisation.",
+                    "Provide insights to the Target eCommerce team as well as the broader organisation on the latest trends and tools for UX/UI Design to help support drive the overall customer and user experience design strategy.",
+                  ]} />
+                </div>
+              </div>
+
+              <Divider />
+
+              {/* IKEA */}
+              <div className="flex flex-col gap-3">
+                <RoleHeader company="IKEA" badgeColor="#fcebaf" title="Digital Merchandising Specialist" years="2016 – 2020" />
+                <BulletList items={[
+                  "Maintain and optimise the IKEA website and mobile app to ensure effective implementation of new product solutions, performance and operations.",
+                  "Conduct user journey and empathy mapping to identify customer friction points within the online experience which in turn plays a part in formulating the product strategy.",
+                  "Ensure a consistently positive and accessible customer experience across IKEA's web platforms that align with the brand design as well as core guidelines.",
+                  "Work closely with the data analytics reviewing web statistics and metrics to optimise the online media mix, functionality, and commercial performance.",
+                  "Drive conversion rate optimisation (CRO) efforts by identifying conversion barriers, proposing and implementing solutions to improve online sales, loyalty acquisition and brand perception.",
+                ]} />
+              </div>
+            </section>
+
+            {/* References */}
+            <section className="bg-white rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-5 flex items-center gap-3">
+              <svg className="w-5 h-5 shrink-0 text-[#888]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <p className="font-semibold text-sm text-black">References to be supplied upon request.</p>
+            </section>
+          </div>
+
+          {/* ── Right column ── */}
+          <div className="flex flex-col gap-4">
+
+            {/* Accomplishments */}
+            <section className="bg-white rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+              <h2 className="font-semibold text-[#1e1e1e] text-2xl">Accomplishments.</h2>
+
+              {/* CRO / BR% */}
+              <div className="flex flex-col gap-4">
+                <h3 className="font-semibold text-[#464646] text-lg leading-snug">
+                  Initiatives focused on increasing conversion rate and decreasing ER/BR%
+                </h3>
+                <div className="flex flex-col gap-3">
+                  <CompanyBadge name="Target Australia" color="#f5dcdc" />
+                  <BulletList items={[
+                    "UX/UI Uplift to Product Listing and Product Description Pages. (Web/App)",
+                    "Improved UX/UI Layout and design across site header and navigation with the goal of removing unnecessary clicks within the journey and helping the consumer find products quicker. (Web/App)",
+                    "Homepage Redesign that followed business priorities as well as consumers needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web/App)",
+                    "Search Functionality uplift providing consumers with the best results, following best practice to deliver the end to end solution. (App)",
+                    "New Cart and Checkout Experience (Web/App)",
+                  ]} />
+                  <CompanyBadge name="IKEA" color="#fcebaf" />
+                  <BulletList items={[
+                    "UX/UI Uplift to Product Description Pages (Web)",
+                    "Improved UX/UI Layout and design across site header and navigation with the goal of removing unnecessary clicks within the journey and helping the consumer find products quicker. (Web)",
+                    "Homepage Redesign that followed business priorities as well as consumers needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web)",
+                  ]} />
+                </div>
+              </div>
+
+              <Divider />
+
+              {/* CX / brand */}
+              <div className="flex flex-col gap-4">
+                <h3 className="font-semibold text-[#464646] text-lg leading-snug">
+                  Initiatives focused on improving customer experience and brand awareness
+                </h3>
+                <div className="flex flex-col gap-3">
+                  <CompanyBadge name="Target Australia" color="#f5dcdc" />
+                  <BulletList items={[
+                    "Review and refine the post-purchase experience for consumers looking at all touchpoints and messaging.",
+                    "Design, test and implement a new online returns portal creating a new channel for customers to manage their online product returns.",
+                    "My Account Dashboard experience (App)",
+                    "Improved Click & Collect experience for consumers to manage their online orders (App/Web)",
+                    "Design System Creation and implementation to ensure consistency and brand alignment across all digital touchpoints.",
+                  ]} />
+                  <CompanyBadge name="IKEA" color="#fcebaf" />
+                  <BulletList items={[
+                    "Created a portal for marketing co-workers to manage all in-store events and activities that would be displayed on their local store websites. This purpose of the portal design was to streamline the process of using multiple CMS platforms to make updates and changes to their local store sites, whilst also providing the customers with a great user experience to view offers and book events.",
+                  ]} />
+                  <CompanyBadge name="Bastion" color="#433f3f" />
+                  <BulletList items={[
+                    "Create a UI Kit for an online news publication which has 4 brands within ensuring best UX Design practices are in place. This UI Kit helps streamline the businesses design and development process as well as enhancing user experience across platforms.",
+                  ]} />
+                  <CompanyBadge name="ReadyTech" color="#a0e4a0" />
+                  <BulletList items={[
+                    "Led the Application Assessment Checklist workflow end-to-end — navigating multiple user types, operational constraints and business rules to deliver measurable improvements to how enrolment teams assess applications.",
+                  ]} />
+                </div>
+              </div>
+            </section>
+
+            {/* Skills */}
+            <section className="bg-white rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+              <h2 className="font-semibold text-[#1e1e1e] text-2xl">Skills.</h2>
+
+              <div className="flex flex-col gap-2">
+                <h3 className="font-semibold text-[#464646] text-lg">Design</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Concept design", "Design strategy", "Process flows", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma"].map(s => (
+                    <Pill key={s} label={s} />
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <h3 className="font-semibold text-[#464646] text-lg">Research</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human centric focus", "User testing strategy", "Empathy mapping"].map(s => (
+                    <Pill key={s} label={s} />
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <h3 className="font-semibold text-[#464646] text-lg">Collaboration</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Facilitate workshops", "Run design showcases", "Sprint Planning", "Stakeholder management", "Communicative", "Design & Product Retros"].map(s => (
+                    <Pill key={s} label={s} />
+                  ))}
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
