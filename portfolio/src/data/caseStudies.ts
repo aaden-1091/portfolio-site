@@ -111,7 +111,7 @@ export const caseStudies: CaseStudy[] = [
     title:       "Student Management System Design",
     company:     "ReadyTech",
     year:        "2025",
-    tags:        ["SaaS", "UX Design"],
+    tags:        ["SaaS", "UX Design", "Education"],
     description: "Redesign an admin portal to streamline workflows for educators and administrators.",
     brief:
       "Schools were managing VET course applications manually — spreadsheets, email chains, no single source of truth. The task was to design a portal where enrolment officers could submit applications on behalf of entire student cohorts, keep track of where each one sat, and not lose their mind doing it.",
@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
     title:       "UX Uplift & Pattern Library",
     company:     "Private Media",
     year:        "2024",
-    tags:        ["UX Design", "Design Systems"],
+    tags:        ["UX Design", "Design Systems", "Media"],
     description: "Unify five publications under one pattern library.",
     brief:
       "Private Media runs four mastheads — Crikey, The Mandarin, SmartCompany, and Inc. Australia — each with its own audience, tone, and commercial model. The brief was to lift the UX across all four to meet current reader expectations, reduce friction in subscription flows, and build a shared pattern library that lets each publication move fast without reinventing the wheel.",
@@ -453,7 +453,7 @@ export const caseStudies: CaseStudy[] = [
     title:       "Product Listing Uplift",
     company:     "Target Australia",
     year:        "2023",
-    tags:        ["UX Design", "E-commerce"],
+    tags:        ["UX Design", "E-commerce", "Retail"],
     description: "Uplift the product listing experience for the Target Australia app.",
     brief:
       "Target Australia's app product listing page was built for the web era — dense layouts, small product cards, buried filters, and no native mobile interactions. The brief was to redesign the PLP to match how Australians actually shop on their phones: faster browsing, smarter filtering, and enough product context to make a decision without tapping into every item individually.",
@@ -693,7 +693,7 @@ export const caseStudies: CaseStudy[] = [
     title:       "Create a Look",
     company:     "Target Australia",
     year:        "2024",
-    tags:        ["UX Design", "E-commerce"],
+    tags:        ["UX Design", "E-commerce", "Retail"],
     description: "Design an outfit curation feature for the Target Australia app.",
     brief:
       "Target Australia's app and website had no way for customers to assemble a complete outfit in one place. Shoppers navigated across separate category silos — tops, bottoms, shoes, accessories — and mentally pieced together a look without any editorial guidance or a way to see how pieces worked together. The brief was to design a 'Create a Look' feature that lets customers build, visualise, and purchase complete styled outfits from a single entry point, across both the mobile app and a parallel desktop web experience for Kids.",

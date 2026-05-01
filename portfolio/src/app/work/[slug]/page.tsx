@@ -392,9 +392,6 @@ export default async function CaseStudyPage({
               {cs.title}
             </h1>
 
-            <p className="mt-8 text-background/40 text-xs font-bold uppercase tracking-widest">
-              {cs.company} · {cs.year}
-            </p>
           </div>
         </section>
 
