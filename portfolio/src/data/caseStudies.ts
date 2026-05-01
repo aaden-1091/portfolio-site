@@ -159,7 +159,7 @@ export const caseStudies: CaseStudy[] = [
         },
         {
           tag:     "Authentication",
-          label:   "Log in to ReadyStudent Portal",
+          label:   "Log in to Portal",
           variant: "auth",
         },
         {

@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/work/readystudent-admin-portal\" -TimeoutSec 8 -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })"
+      "PowerShell(Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/work/readystudent-admin-portal\" -TimeoutSec 8 -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })",
+      "Bash(git commit -m ' *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(npx tsc *)",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const fs=require\\('fs'\\); const d=JSON.parse\\(fs.readFileSync\\('C:/Users/Aaron/.claude/projects/c--Users-Aaron-portfolio-site/84dc1de1-ccdc-4a09-a960-dda1a4e1955f/tool-results/mcp-claude_ai_Figma-get_metadata-1777548280274.txt','utf8'\\)\\); console.log\\('items:', d.length\\); d.forEach\\(\\(item,i\\)=>console.log\\(i, item.type, item.text?.slice\\(0,200\\)\\)\\)\")"
     ]
   }
 }
