@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ScreenImage from "@/components/ScreenImage";
 import {
   getCaseStudy,
   type JourneyFlow,
@@ -630,8 +631,7 @@ export default async function CaseStudyPage({
                         </div>
                         {/* Screen content */}
                         <div className="aspect-[9/18] relative overflow-hidden bg-background/5">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
+                          <ScreenImage
                             src={screen.src}
                             alt={screen.label}
                             className="absolute inset-0 w-full h-full object-cover object-top"
@@ -673,8 +673,7 @@ export default async function CaseStudyPage({
                           <span className="w-2.5 h-2.5 rounded-full bg-background/15 shrink-0" aria-hidden="true" />
                         </div>
                         <div className="aspect-[16/10] bg-background/5 relative overflow-hidden">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
+                          <ScreenImage
                             src={screen.src}
                             alt={screen.label}
                             className="absolute inset-0 w-full h-full object-cover object-top"
