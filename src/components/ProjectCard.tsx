@@ -8,7 +8,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const { slug, title, description, tags } = project;
+  const { slug, title, description, tags, image } = project;
   const indexLabel = String(index + 1).padStart(2, "0");
 
   return (
@@ -20,8 +20,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Index number */}
       <span className="font-mono text-xs text-ink-light mb-2">{indexLabel}</span>
 
-      {/* Placeholder */}
+      {/* Cover image */}
       <div className="relative aspect-square bg-[#e8e8e8] overflow-hidden mb-3">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={image}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         {/* Slide-up CTA reveal */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
           <div className="translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-ink px-4 py-3">
