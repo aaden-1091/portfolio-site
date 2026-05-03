@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug:        "ux-ui-uplift-pattern-library",
-    title:       "UX Uplift & Pattern Library",
+    title:       "UX Uplift & UI Pattern Library",
     company:     "Private Media",
     year:        "2024",
     tags:        ["UX Design", "Design Systems", "Media"],
@@ -452,7 +452,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug:        "app-plp-uplift",
-    title:       "Product Listing Uplift",
+    title:       "Retail App Product Listing Uplift",
     company:     "Target Australia",
     year:        "2023",
     tags:        ["UX Design", "E-commerce", "Retail"],
@@ -691,7 +691,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug:        "create-a-look",
-    title:       "Create a Look",
+    title:       "Create a Look — Digital Retail Experience",
     company:     "Target Australia",
     year:        "2024",
     tags:        ["UX Design", "E-commerce", "Retail"],

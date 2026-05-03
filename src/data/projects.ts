@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     id:          "2",
     slug:        "ux-ui-uplift-pattern-library",
-    title:       "UX Uplift & Pattern Library",
+    title:       "UX Uplift & UI Pattern Library",
     company:     "Private Media",
     description: "Unify five publications under one pattern library.",
     year:        "2024",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     id:          "3",
     slug:        "app-plp-uplift",
-    title:       "Product Listing Uplift",
+    title:       "Retail App Product Listing Uplift",
     company:     "Target Australia",
     description: "Redesign a product listing experience to reduce browsing friction and lift add-to-cart conversion.",
     year:        "2023",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     id:          "4",
     slug:        "create-a-look",
-    title:       "Create a Look",
+    title:       "Create a Look — Digital Retail Experience",
     company:     "Target Australia",
     description: "Design an outfit curation feature to drive multi-item purchases and increase average basket value.",
     year:        "2024",
