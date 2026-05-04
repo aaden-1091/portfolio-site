@@ -276,7 +276,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Research</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human centric focus", "User testing strategy", "Empathy mapping"].map(s => (
+                  {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human-centred design", "User testing strategy", "Empathy mapping"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
