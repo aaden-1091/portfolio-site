@@ -67,7 +67,7 @@ export default function Footer() {
               Location
             </h3>
             <p className="font-medium">
-              Australia
+              Melbourne, Australia
               <br />
               AEST (UTC +10)
             </p>
