@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 
-// TODO: Replace with locally hosted image — export from Figma and save to public/illustrations/aaron-photo.jpg
-const PHOTO_URL = "https://www.figma.com/api/mcp/asset/092c98ce-e01f-4dd6-a12a-6b5ca90e3b9b";
+const PHOTO_URL = "/illustrations/aaron-photo.jpg";
 
 function CompanyBadge({ name, color }: { name: string; color: string }) {
   return (
