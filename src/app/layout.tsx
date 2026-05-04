@@ -12,7 +12,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Aaron de Netto | UX UI Design Lead",
   description:
-    "UX UI Design Lead blurring the lines between structural logic and emotional resonance.",
+    "Aaron de Netto — UX/UI Design Lead with experience in e-commerce, SaaS, design systems, and accessibility. Based in Australia.",
 };
 
 export default function RootLayout({

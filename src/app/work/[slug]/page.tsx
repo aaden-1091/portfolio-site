@@ -74,8 +74,8 @@ function Arrow({ accent }: { accent?: boolean }) {
 
 function JourneyFlowDiagram({ flow }: { flow: JourneyFlow }) {
   const stepVariantClasses: Record<string, string> = {
-    entry: "bg-[#f2f1ec] border border-ink/10 text-ink",
-    auth:  "bg-[#f2f1ec] border border-ink/10 text-ink",
+    entry: "bg-surface border border-ink/10 text-ink",
+    auth:  "bg-surface border border-ink/10 text-ink",
     hub:   "bg-ink text-background",
   };
 
@@ -422,7 +422,7 @@ export default async function CaseStudyPage({
 
         {/* ── Challenges ───────────────────────────────────────────────────── */}
         <section
-          className={`bg-[#f2f1ec] ${sectionPadding}`}
+          className={`bg-surface ${sectionPadding}`}
           style={sectionSpacing}
           aria-labelledby="cs-challenges"
         >
@@ -462,7 +462,7 @@ export default async function CaseStudyPage({
 
         {/* ── User Needs ───────────────────────────────────────────────────── */}
         <section
-          className={`bg-[#f2f1ec] ${sectionPadding}`}
+          className={`bg-surface ${sectionPadding}`}
           style={sectionSpacing}
           aria-labelledby="cs-user-needs"
         >
@@ -503,7 +503,7 @@ export default async function CaseStudyPage({
         {/* ── Competitor Analysis ──────────────────────────────────────────── */}
         {cs.competitorAnalysis && (
           <section
-            className={`bg-[#f2f1ec] ${sectionPadding}`}
+            className={`bg-surface ${sectionPadding}`}
             style={sectionSpacing}
             aria-labelledby="cs-competitors"
           >
@@ -545,7 +545,7 @@ export default async function CaseStudyPage({
         {/* ── Wireframes ───────────────────────────────────────────────────── */}
         {cs.wireframes && cs.wireframes.length > 0 && (
           <section
-            className={`bg-[#f2f1ec] ${sectionPadding}`}
+            className={`bg-surface ${sectionPadding}`}
             style={sectionSpacing}
             aria-labelledby="cs-wireframes"
           >
@@ -586,7 +586,7 @@ export default async function CaseStudyPage({
         {/* ── User Testing Feedback ─────────────────────────────────────────── */}
         {cs.userTestingFeedback && (
           <section
-            className={`bg-[#f2f1ec] ${sectionPadding}`}
+            className={`bg-surface ${sectionPadding}`}
             style={sectionSpacing}
             aria-labelledby="cs-testing-feedback"
           >

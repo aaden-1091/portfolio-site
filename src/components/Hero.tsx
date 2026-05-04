@@ -12,7 +12,7 @@ export default function Hero() {
         <h1
           id="hero-heading"
           className="font-extrabold lowercase text-ink mt-4"
-          style={{ fontSize: "clamp(4rem, 8vw, 10rem)", lineHeight: "clamp(0.88, 0.9, 0.92)", letterSpacing: "-0.05em" }}
+          style={{ fontSize: "clamp(4rem, 8vw, 10rem)", lineHeight: 0.9, letterSpacing: "-0.05em" }}
         >
           experience-led <br />
           <span className="text-accent-fill">design</span> <br />

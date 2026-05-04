@@ -1,6 +1,4 @@
-import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-import Button from "@/components/ui/Button";
 import { projects } from "@/data/projects";
 
 export default function WorkGrid() {
@@ -32,14 +30,6 @@ export default function WorkGrid() {
         ))}
       </div>
 
-      {/* Archive CTA */}
-      <div className="mt-12 flex justify-start">
-        <Link href="#work">
-          <Button variant="ghost" arrow className="group text-xl font-bold">
-            View full archive
-          </Button>
-        </Link>
-      </div>
     </section>
   );
 }

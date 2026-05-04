@@ -247,7 +247,7 @@ export const caseStudies: CaseStudy[] = [
     company:     "Private Media",
     year:        "2024",
     tags:        ["UX Design", "Design Systems", "Media"],
-    description: "Unify five publications under one pattern library.",
+    description: "Unify four publications under one pattern library.",
     brief:
       "Private Media runs four mastheads — Crikey, The Mandarin, SmartCompany, and Inc. Australia — each with its own audience, tone, and commercial model. The brief was to lift the UX across all four to meet current reader expectations, reduce friction in subscription flows, and build a shared pattern library that lets each publication move fast without reinventing the wheel.",
     user:
@@ -403,7 +403,7 @@ export const caseStudies: CaseStudy[] = [
         "The biggest barrier to subscription wasn't price — it was unclear value communication at the moment of decision. Users didn't understand what they'd get that they weren't already getting for free. The redesigned pricing page addresses this directly.",
     },
     detailedDesign: {
-      context:   "High-fidelity screens across The Mandarin and SmartCompany — covering the key reader and subscriber journeys. Designs reflect publication-specific branding applied within the shared pattern library.",
+      context:   "High-fidelity screens across The Mandarin and SmartCompany — covering the key reader and subscriber journeys. Designs reflect publication-specific branding applied within the shared pattern library. Screens shown represent The Mandarin and SmartCompany; the pattern library was applied across all four mastheads.",
       frameType: "mobile",
       screens: [
         {

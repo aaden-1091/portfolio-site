@@ -7,7 +7,6 @@ export interface Project {
   year:        string;
   image:       string;
   tags:        string[];
-  badge?:      string;
   category:    "All" | "E-commerce" | "Design Systems" | "SaaS";
 }
 
@@ -28,11 +27,10 @@ export const projects: Project[] = [
     slug:        "ux-ui-uplift-pattern-library",
     title:       "UX Uplift & UI Pattern Library",
     company:     "Private Media",
-    description: "Unify five publications under one pattern library.",
+    description: "Unify four publications under one pattern library.",
     year:        "2024",
     image:       "/illustrations/cs2-cover.png",
     tags:        ["UX Design", "Design Systems", "Media"],
-    badge:       "Case Study",
     category:    "Design Systems",
   },
   {

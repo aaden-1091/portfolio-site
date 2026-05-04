@@ -53,7 +53,7 @@ body {
 }
 
 .text-accent-fill {
-  background: #d95a41;
+  background: var(--color-accent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

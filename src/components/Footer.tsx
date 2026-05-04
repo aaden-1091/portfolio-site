@@ -44,6 +44,7 @@ export default function Footer() {
               {[
                 { label: "LinkedIn", href: "https://www.linkedin.com/in/aaron-denetto/", external: true },
                 { label: "CV", href: "/cv", external: false },
+                { label: "aaden.designs@gmail.com", href: "mailto:aaden.designs@gmail.com", external: false },
               ].map(({ label, href, external }) => (
                 <li key={label}>
                   <a

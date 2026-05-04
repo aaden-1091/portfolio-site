@@ -6,7 +6,7 @@ const interests = [
   },
   {
     emoji: "🏔️",
-    title: "Topography",
+    title: "Mountains",
     body:  "Weekends belong to trails and summit views, no apology. Navigating uncertain terrain toward a clear goal has a way of making UX friction impossible to ignore.",
   },
   {

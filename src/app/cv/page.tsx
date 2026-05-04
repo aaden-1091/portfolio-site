@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 
+// TODO: Replace with locally hosted image — export from Figma and save to public/illustrations/aaron-photo.jpg
 const PHOTO_URL = "https://www.figma.com/api/mcp/asset/092c98ce-e01f-4dd6-a12a-6b5ca90e3b9b";
 
 function CompanyBadge({ name, color }: { name: string; color: string }) {
   return (
     <span
       className="inline-flex items-center px-2 py-1 rounded-[2px] text-xs font-semibold shrink-0"
-      style={{ backgroundColor: color, color: color === "#433f3f" ? "#fff" : "#1e1e1e" }}
+      style={{ backgroundColor: color, color: color === "#433f3f" ? "#fff" : "var(--color-ink)" }}
     >
       {name}
     </span>
@@ -30,8 +31,8 @@ function RoleHeader({
     <div className="flex flex-wrap gap-2 items-center">
       <CompanyBadge name={company} color={badgeColor} />
       <div className="flex flex-1 justify-between items-center gap-2 min-w-0">
-        <span className="font-semibold text-[#1e1e1e] text-base leading-tight">{title}</span>
-        <span className="font-semibold text-[#1e1e1e] text-sm whitespace-nowrap shrink-0">{years}</span>
+        <span className="font-semibold text-ink text-base leading-tight">{title}</span>
+        <span className="font-semibold text-ink text-sm whitespace-nowrap shrink-0">{years}</span>
       </div>
     </div>
   );
@@ -50,12 +51,12 @@ function BulletList({ items }: { items: string[] }) {
 }
 
 function Divider() {
-  return <hr className="border-t border-[#e0e0e0]" />;
+  return <hr className="border-t border-surface" />;
 }
 
 function Pill({ label }: { label: string }) {
   return (
-    <span className="bg-[#e9e9e9] text-[#1e1e1e] text-xs font-semibold px-3 py-2 rounded-full whitespace-nowrap">
+    <span className="bg-surface text-ink text-xs font-semibold px-3 py-2 rounded-full whitespace-nowrap">
       {label}
     </span>
   );
@@ -63,10 +64,10 @@ function Pill({ label }: { label: string }) {
 
 export default function CVPage() {
   return (
-    <div className="bg-[#f3f3f3] min-h-screen">
+    <div className="bg-background min-h-screen">
 
       {/* Header */}
-      <header className="bg-[#1e1e1e] text-white px-6 md:px-12 py-10">
+      <header className="bg-ink text-white px-6 md:px-12 py-10">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-start md:items-center">
 
           {/* Photo */}
@@ -75,7 +76,7 @@ export default function CVPage() {
             <img
               src={PHOTO_URL}
               alt="Aaron de Netto"
-              className="w-32 h-32 rounded-full object-cover bg-[#242424]"
+              className="w-32 h-32 rounded-full object-cover bg-ink"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = "/illustrations/screen-placeholder.svg";
               }}
@@ -97,7 +98,7 @@ export default function CVPage() {
 
       {/* Back nav */}
       <div className="max-w-5xl mx-auto px-6 md:px-12 pt-6">
-        <Link href="/" className="text-xs font-semibold uppercase tracking-widest text-[#888] hover:text-[#1e1e1e] transition-colors">
+        <Link href="/" className="text-xs font-semibold uppercase tracking-widest text-ink-light hover:text-ink transition-colors">
           ← Back to portfolio
         </Link>
       </div>
@@ -110,12 +111,12 @@ export default function CVPage() {
           <div className="flex flex-col gap-4">
 
             {/* Professional Journey */}
-            <section className="bg-white rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
-              <h2 className="font-semibold text-[#1e1e1e] text-2xl">Professional Journey.</h2>
+            <section className="bg-background rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+              <h2 className="font-semibold text-ink text-2xl">Professional Journey.</h2>
 
               {/* ReadyTech */}
               <div className="flex flex-col gap-3">
-                <RoleHeader company="ReadyTech" badgeColor="#a0e4a0" title="Senior Designer" years="2025 – Present" />
+                <RoleHeader company="ReadyTech" badgeColor="#a0e4a0" title="Senior UX Designer" years="2025 – Present" />
                 <BulletList items={[
                   "Work within a cross-functional product squad focused within the education sector of ReadyTech on admissions as part of a SaaS Student Management System.",
                   "Lead design across complex problem spaces, from defining opportunities through discovery to delivering validated, dev-ready solutions.",
@@ -160,8 +161,8 @@ export default function CVPage() {
                 {/* Target Australia — Lead (no badge, same company) */}
                 <div className="flex flex-col gap-3">
                   <div className="flex justify-between items-center gap-2">
-                    <span className="font-semibold text-[#1e1e1e] text-base leading-tight">UX – UI Design Lead</span>
-                    <span className="font-semibold text-[#1e1e1e] text-sm whitespace-nowrap shrink-0">2020 – 2022</span>
+                    <span className="font-semibold text-ink text-base leading-tight">UX – UI Design Lead</span>
+                    <span className="font-semibold text-ink text-sm whitespace-nowrap shrink-0">2020 – 2022</span>
                   </div>
                   <BulletList items={[
                     "Following UXD and Human centred design principles throughout conception to execution, owning and delivering intuitive, efficient, and delightful experiences for all solutions.",
@@ -190,8 +191,8 @@ export default function CVPage() {
             </section>
 
             {/* References */}
-            <section className="bg-white rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-5 flex items-center gap-3">
-              <svg className="w-5 h-5 shrink-0 text-[#888]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <section className="bg-background rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-5 flex items-center gap-3">
+              <svg className="w-5 h-5 shrink-0 text-ink-light" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
               </svg>
               <p className="font-semibold text-sm text-black">References to be supplied upon request.</p>
@@ -202,12 +203,12 @@ export default function CVPage() {
           <div className="flex flex-col gap-4">
 
             {/* Accomplishments */}
-            <section className="bg-white rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
-              <h2 className="font-semibold text-[#1e1e1e] text-2xl">Accomplishments.</h2>
+            <section className="bg-background rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+              <h2 className="font-semibold text-ink text-2xl">Accomplishments.</h2>
 
               {/* CRO / BR% */}
               <div className="flex flex-col gap-4">
-                <h3 className="font-semibold text-[#464646] text-lg leading-snug">
+                <h3 className="font-semibold text-ink-light text-lg leading-snug">
                   Initiatives focused on increasing conversion rate and decreasing ER/BR%
                 </h3>
                 <div className="flex flex-col gap-3">
@@ -232,7 +233,7 @@ export default function CVPage() {
 
               {/* CX / brand */}
               <div className="flex flex-col gap-4">
-                <h3 className="font-semibold text-[#464646] text-lg leading-snug">
+                <h3 className="font-semibold text-ink-light text-lg leading-snug">
                   Initiatives focused on improving customer experience and brand awareness
                 </h3>
                 <div className="flex flex-col gap-3">
@@ -261,11 +262,11 @@ export default function CVPage() {
             </section>
 
             {/* Skills */}
-            <section className="bg-white rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
-              <h2 className="font-semibold text-[#1e1e1e] text-2xl">Skills.</h2>
+            <section className="bg-background rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+              <h2 className="font-semibold text-ink text-2xl">Skills.</h2>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-[#464646] text-lg">Design</h3>
+                <h3 className="font-semibold text-ink-light text-lg">Design</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Concept design", "Design strategy", "Process flows", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma"].map(s => (
                     <Pill key={s} label={s} />
@@ -274,7 +275,7 @@ export default function CVPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-[#464646] text-lg">Research</h3>
+                <h3 className="font-semibold text-ink-light text-lg">Research</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human centric focus", "User testing strategy", "Empathy mapping"].map(s => (
                     <Pill key={s} label={s} />
@@ -283,7 +284,7 @@ export default function CVPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-[#464646] text-lg">Collaboration</h3>
+                <h3 className="font-semibold text-ink-light text-lg">Collaboration</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Facilitate workshops", "Run design showcases", "Sprint Planning", "Stakeholder management", "Communicative", "Design & Product Retros"].map(s => (
                     <Pill key={s} label={s} />
