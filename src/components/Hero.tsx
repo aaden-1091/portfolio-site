@@ -49,14 +49,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-ink"
-        aria-hidden="true"
-      >
-        <span>Scroll</span>
-        <div className="w-12 h-px bg-ink" />
-      </div>
     </section>
   );
 }
