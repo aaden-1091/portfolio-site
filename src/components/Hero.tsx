@@ -28,23 +28,14 @@ export default function Hero() {
             making it look effortless.
           </p>
 
-          <div className="flex flex-col items-start md:items-end gap-1.5 text-sm font-medium uppercase tracking-widest text-ink-light">
-            <span>Currently based in</span>
-            <span className="text-ink flex items-center gap-2 font-semibold">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Melbourne, Australia · AEST (UTC+10)
-            </span>
+          <div className="flex items-end justify-end">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/illustrations/aaron-illustration.png"
+              alt=""
+              aria-hidden="true"
+              className="w-32 h-32 md:w-36 md:h-36 rounded-xl object-cover opacity-90"
+            />
           </div>
         </div>
       </div>
