@@ -146,7 +146,7 @@ export default function CVPage() {
                   "Conduct usability testing and gather user feedback to iterate and refine designs. Perform quality assurance checks to ensure deliverables meet required design principles (WCAG), and the business requirements.",
                   "Manage project timelines, budgets, and resources effectively to deliver projects on time and within scope at the highest level.",
                   "Support and mentor UX and Product Designers at all levels, helping them grow through guidance, feedback, and collaboration.",
-                  "Conduct workshops, training sessions, and knowledge sharing activities with clients and internal teams.",
+                  "Conduct workshops, training sessions, and knowledge-sharing activities with clients and internal teams.",
                 ]} />
               </div>
 
@@ -259,7 +259,7 @@ export default function CVPage() {
                   ]} />
                   <CompanyBadge name="Bastion" color="#433f3f" />
                   <BulletList items={[
-                    "Create a UI Kit for an online news publication which has 4 brands within ensuring best UX Design practices are in place. This UI Kit helps streamline the businesses design and development process as well as enhancing user experience across platforms.",
+                    "Create a UI Kit for an online news publication which has 4 brands within ensuring best UX Design practices are in place. This UI Kit helps streamline the business's design and development process as well as enhancing user experience across platforms.",
                   ]} />
                   <CompanyBadge name="ReadyTech" color="#a0e4a0" />
                   <BulletList items={[
