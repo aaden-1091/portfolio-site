@@ -133,7 +133,7 @@ export default function CVPage() {
                 <BulletList items={[
                   "Engage with stakeholders to understand their business goals, user needs, and requirements.",
                   "Translate stakeholder requirements into effective UX/UI strategies and product solutions that align with the key metrics and KPI deliverables.",
-                  "Create wireframes, prototypes, and design mockups to visualise proposed solutions gathering feedback along the way. Collaborate with product and engineering teams to ensure seamless integration of design elements and functionalities dependent on platforms requirements.",
+                  "Create wireframes, prototypes, and design mockups to visualise proposed solutions gathering feedback along the way. Collaborate with product and engineering teams to ensure seamless integration of design elements and functionalities dependent on platform requirements.",
                   "Conduct usability testing and gather user feedback to iterate and refine designs. Perform quality assurance checks to ensure deliverables meet required design principles (WCAG), and the business requirements.",
                   "Manage project timelines, budgets, and resources effectively to deliver projects on time and within scope at the highest level.",
                   "Support and mentor UX and Product Designers at all levels, helping them grow through guidance, feedback, and collaboration.",
@@ -164,7 +164,7 @@ export default function CVPage() {
                     <span className="font-semibold text-ink text-sm whitespace-nowrap shrink-0">2020 – 2022</span>
                   </div>
                   <BulletList items={[
-                    "Following UXD and Human centred design principles throughout conception to execution, owning and delivering intuitive, efficient, and delightful experiences for all solutions.",
+                    "Following UXD and Human-centred design principles throughout conception to execution, owning and delivering intuitive, efficient, and delightful experiences for all solutions.",
                     "Conduct user journey and empathy mapping to identify customer friction points within the online experience which in turn plays a part in formulating the product strategy.",
                     "Create wireframes, prototypes, and design mockups to visualise proposed solutions and gather feedback.",
                     "Validate and iterate on product solutions to determine viability before progressing to detailed design through feedback sessions, usability testing, A/B, and live testing.",
@@ -215,15 +215,15 @@ export default function CVPage() {
                   <BulletList items={[
                     "UX/UI Uplift to Product Listing and Product Description Pages. (Web/App)",
                     "Improved UX/UI Layout and design across site header and navigation with the goal of removing unnecessary clicks within the journey and helping the consumer find products quicker. (Web/App)",
-                    "Homepage Redesign that followed business priorities as well as consumers needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web/App)",
-                    "Search Functionality uplift providing consumers with the best results, following best practice to deliver the end to end solution. (App)",
+                    "Homepage Redesign that followed business priorities as well as consumer needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web/App)",
+                    "Search Functionality uplift providing consumers with the best results, following best practice to deliver the end-to-end solution. (App)",
                     "New Cart and Checkout Experience (Web/App)",
                   ]} />
                   <CompanyBadge name="IKEA" color="#fcebaf" />
                   <BulletList items={[
                     "UX/UI Uplift to Product Description Pages (Web)",
                     "Improved UX/UI Layout and design across site header and navigation with the goal of removing unnecessary clicks within the journey and helping the consumer find products quicker. (Web)",
-                    "Homepage Redesign that followed business priorities as well as consumers needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web)",
+                    "Homepage Redesign that followed business priorities as well as consumer needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web)",
                   ]} />
                 </div>
               </div>
