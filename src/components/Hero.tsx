@@ -7,7 +7,16 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="max-w-6xl">
-        <Badge status="available" label="Aaron de Netto" />
+        <div className="flex items-center gap-3">
+          <Badge status="available" label="Aaron de Netto" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/illustrations/aaron-illustration.png"
+            alt=""
+            aria-hidden="true"
+            className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
+          />
+        </div>
 
         <h1
           id="hero-heading"
@@ -29,13 +38,6 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/illustrations/aaron-illustration.png"
-          alt=""
-          aria-hidden="true"
-          className="mt-6 w-28 h-28 rounded-2xl object-cover opacity-85 shadow-xl md:absolute md:bottom-14 md:right-12 md:mt-0 md:w-40 md:h-40 md:shadow-2xl"
-        />
       </div>
 
     </section>
