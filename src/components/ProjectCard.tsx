@@ -21,7 +21,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <span className="font-mono text-xs text-ink-light mb-2">{indexLabel}</span>
 
       {/* Cover image */}
-      <div className="relative aspect-square bg-[#e8e8e8] overflow-hidden mb-3">
+      <div className="relative aspect-square bg-[#e8e8e8] overflow-hidden mb-3 rounded-2xl">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
