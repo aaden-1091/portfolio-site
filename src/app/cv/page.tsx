@@ -88,7 +88,7 @@ export default function CVPage() {
               Aaron<br />de Netto.
             </h1>
             <p className="text-sm font-light text-white/70">
-              Staff Product Designer
+              Lead Product Designer
             </p>
           </div>
 
