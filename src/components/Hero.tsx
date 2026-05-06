@@ -19,7 +19,7 @@ export default function Hero() {
           that moves people.
         </h1>
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-8 md:mt-16">
+        <div className="mt-8 md:mt-16">
           <p className="text-xl md:text-2xl font-medium max-w-xl leading-relaxed text-ink-light">
             Leading design from discovery to delivery — across retail,
             government, enterprise, and media. A track record in CRO,
@@ -27,17 +27,15 @@ export default function Hero() {
             problems into experiences that hold up at scale. The craft is in
             making it look effortless.
           </p>
-
-          <div className="flex items-end justify-end">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/illustrations/aaron-illustration.png"
-              alt=""
-              aria-hidden="true"
-              className="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover opacity-90"
-            />
-          </div>
         </div>
+
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/illustrations/aaron-illustration.png"
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute bottom-14 right-12 w-40 h-40 rounded-2xl object-cover opacity-85 shadow-2xl"
+        />
       </div>
 
     </section>
