@@ -88,7 +88,7 @@ export default function CVPage() {
               Aaron<br />de Netto.
             </h1>
             <p className="text-sm font-light text-white/70">
-              User Experience &amp; Interface Design Lead
+              Staff Product Designer
             </p>
           </div>
 
@@ -100,6 +100,15 @@ export default function CVPage() {
         <Link href="/" className="text-xs font-semibold uppercase tracking-widest text-ink-light hover:text-ink transition-colors">
           ← Back to portfolio
         </Link>
+      </div>
+
+      {/* Professional Summary */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 pt-4">
+        <div className="bg-ink rounded-lg px-5 py-4">
+          <p className="text-xs text-white/80 leading-relaxed font-light">
+            Product design leader with 10+ years crafting end-to-end experiences across consumer eCommerce, enterprise SaaS, and B2B platforms. I set design direction across complex, multi-stakeholder problem spaces — partnering with product and engineering to deliver 0-to-1 solutions, scale design systems, and align executive stakeholders. Known for navigating ambiguity with rigour: grounding decisions in research, driving cross-functional alignment, and mentoring teams to do their best work.
+          </p>
+        </div>
       </div>
 
       {/* Main content */}
@@ -178,7 +187,7 @@ export default function CVPage() {
 
               {/* IKEA */}
               <div className="flex flex-col gap-3">
-                <RoleHeader company="IKEA" badgeColor="#fcebaf" title="Digital Merchandising Specialist" years="2016 – 2020" />
+                <RoleHeader company="IKEA" badgeColor="#fcebaf" title="UX & Digital Product Designer" years="2016 – 2020" />
                 <BulletList items={[
                   "Maintain and optimise the IKEA website and mobile app to ensure effective implementation of new product solutions, performance and operations.",
                   "Conduct user journey and empathy mapping to identify customer friction points within the online experience which in turn plays a part in formulating the product strategy.",
@@ -254,7 +263,7 @@ export default function CVPage() {
                   ]} />
                   <CompanyBadge name="ReadyTech" color="#a0e4a0" />
                   <BulletList items={[
-                    "Led the Application Assessment Checklist workflow end-to-end — navigating multiple user types, operational constraints and business rules to deliver measurable improvements to how enrolment teams assess applications.",
+                    "0-to-1 design of the Application Assessment Checklist — a complex, multi-user-type workflow spanning admissions officers, compliance reviewers, and institutional managers. Defined the end-to-end interaction model, navigated conflicting business rules, and delivered a validated solution that measurably reduced processing time for enrolment teams across multiple campuses.",
                   ]} />
                 </div>
               </div>
@@ -267,7 +276,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Design</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Concept design", "Design strategy", "Process flows", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma"].map(s => (
+                  {["Concept design", "Design strategy", "Process flows", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma", "B2B / Enterprise design", "Complex workflow design"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
@@ -276,7 +285,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Research</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human-centred design", "User testing strategy", "Empathy mapping"].map(s => (
+                  {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human-centred design", "User testing strategy", "Empathy mapping", "Jobs-to-be-done"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
@@ -285,7 +294,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Collaboration</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Facilitate workshops", "Run design showcases", "Sprint Planning", "Stakeholder management", "Communicative", "Design & Product Retros"].map(s => (
+                  {["Facilitate workshops", "Run design showcases", "Sprint Planning", "Stakeholder management", "Communicative", "Design & Product Retros", "Cross-functional alignment"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
