@@ -34,7 +34,7 @@ export default function Hero() {
               src="/illustrations/aaron-illustration.png"
               alt=""
               aria-hidden="true"
-              className="w-32 h-32 md:w-36 md:h-36 rounded-xl object-cover opacity-90"
+              className="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover opacity-90"
             />
           </div>
         </div>
