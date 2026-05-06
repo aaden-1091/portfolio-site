@@ -7,8 +7,9 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="max-w-6xl">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <Badge status="available" label="Aaron de Netto" />
+          <span className="text-xs font-semibold uppercase tracking-widest text-ink-light">Lead Product Designer</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/illustrations/aaron-illustration.png"
