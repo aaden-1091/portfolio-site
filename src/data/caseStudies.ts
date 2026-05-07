@@ -237,7 +237,7 @@ export const caseStudies: CaseStudy[] = [
       ctaNote: "The prototype covers the full submission flow — login through to TAFE handoff. Desktop-first, mid-fidelity.",
     },
     prototypeLinks: [
-      { label: "View prototype", url: "https://www.figma.com/proto/b63FZUKXKvVZterDbHwhbj/Learning-Management-System?node-id=7-2790&p=f&viewport=-66%2C268%2C0.03&t=43CPhIc2uTCG80eL-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7%3A2790&page-id=0%3A1" },
+      { label: "View prototype", url: "https://www.figma.com/proto/b63FZUKXKvVZterDbHwhbj/Learning-Management-System?node-id=26-6&p=f&viewport=515%2C410%2C0.08&t=fuGyYpuKLLDaJfcO-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=26%3A6&page-id=26%3A2" },
     ],
     nextSlug: "ux-ui-uplift-pattern-library",
   },
