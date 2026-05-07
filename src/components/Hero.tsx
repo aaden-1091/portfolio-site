@@ -31,11 +31,12 @@ export default function Hero() {
 
         <div className="mt-8 md:mt-16">
           <p className="text-xl md:text-2xl font-medium max-w-xl leading-relaxed text-ink-light">
-            Leading design from discovery to delivery — across retail,
-            government, enterprise, and media. A track record in CRO,
-            accessibility, and design systems translates complex, high-stakes
-            problems into experiences that hold up at scale. The craft is in
-            making it look effortless.
+            10+ years leading design from discovery to delivery — across
+            consumer eCommerce, enterprise SaaS, and B2B platforms. A track
+            record in CRO, accessibility, and design systems translates complex,
+            high-stakes problems into experiences that hold up at scale. Known
+            for navigating ambiguity with rigour. The craft is in making it look
+            effortless.
           </p>
         </div>
 
