@@ -259,11 +259,15 @@ export default function CVPage() {
                   ]} />
                   <CompanyBadge name="Bastion" color="#433f3f" />
                   <BulletList items={[
-                    "Create a UI Kit for an online news publication which has 4 brands within ensuring best UX Design practices are in place. This UI Kit helps streamline the business's design and development process as well as enhancing user experience across platforms.",
+                    "Created a UI Kit for an online news publication spanning 4 brands, ensuring best-practice UX design principles are in place. The UI Kit streamlines the business's design and development process whilst enhancing user experience across platforms.",
+                    "Led end-to-end discovery, design, testing, and handover of a brand new consumer app for a leading enterprise delivery company — creating an intuitive mobile experience enabling users to effortlessly track, manage, and stay informed on their deliveries in real time.",
+                    "Conducted extensive research and in-depth customer interviews across a diverse range of ages, backgrounds, and demographics to understand the full vehicle rental journey — from discovery and comparison through to booking, use, and post-hire. Findings were synthesised into a comprehensive end-to-end customer journey map documenting current-state experiences, key touchpoints, pain points, and prioritised opportunities for improvement.",
+                    "Supported the full replatform and redesign of a luxury furniture retailer's digital presence — encompassing site architecture, UX/UI design, development handover, SEO strategy, and a CRO plan to grow brand awareness and drive sustainable online sales growth.",
+                    "Designed an end-to-end personalisation experience for a digital media company's TV application — guiding users through an intuitive QR code-initiated onboarding flow to curate and prioritise the news and content most relevant to them. The experience balanced rich personalisation with full transparency, using clear progress indicators to ensure the journey felt seamless, engaging, and always in the user's control.",
                   ]} />
                   <CompanyBadge name="ReadyTech" color="#a0e4a0" />
                   <BulletList items={[
-                    "0-to-1 design of the Application Assessment Checklist — a complex, multi-user-type workflow spanning admissions officers, compliance reviewers, and institutional managers. Defined the end-to-end interaction model, navigated conflicting business rules, and delivered a validated solution that measurably reduced processing time for enrolment teams across multiple campuses.",
+                    "0-to-1 design of the Application Assessment Checklist — an intuitive, multi-user-type workflow enabling admissions teams to seamlessly manage and progress applications once all required information has been submitted. Built-in mechanisms allow teams to connect directly with applicants to follow up on outstanding items, assign tasks across departments, and maintain clear visibility over the full assessment pipeline — reducing manual effort and processing time across multiple campuses.",
                   ]} />
                 </div>
               </div>
