@@ -222,11 +222,11 @@ export default function CVPage() {
                 <div className="flex flex-col gap-3">
                   <CompanyBadge name="Target Australia" color="#f5dcdc" />
                   <BulletList items={[
-                    "UX/UI Uplift to Product Listing and Product Description Pages. (Web/App)",
-                    "Improved UX/UI Layout and design across site header and navigation with the goal of removing unnecessary clicks within the journey and helping the consumer find products quicker. (Web/App)",
-                    "Homepage Redesign that followed business priorities as well as consumer needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web/App)",
-                    "Search Functionality uplift providing consumers with the best results, following best practice to deliver the end-to-end solution. (App)",
-                    "New Cart and Checkout Experience (Web/App)",
+                    "Led a comprehensive UX/UI uplift of Product Listing and Product Description Pages — improving visual hierarchy, scannability, and purchase confidence through stronger content layout, clearer CTAs, and optimised product imagery presentation. (Web/App)",
+                    "Redesigned the site header and navigation to reduce unnecessary clicks and friction in the discovery journey — simplifying information architecture and improving wayfinding to help consumers find and reach products faster. (Web/App)",
+                    "Led a full homepage redesign balancing business priorities with consumer needs — surfacing inspiration, promotions, and tools to drive immediate engagement and purchase intent, while establishing repeatable design patterns to increase the design team's delivery efficiency. (Web/App)",
+                    "Delivered an end-to-end Search Functionality uplift — improving result relevance, filtering, and zero-results handling to ensure consumers consistently found what they were looking for, following UX best practices throughout. (App)",
+                    "Designed and delivered a new Cart and Checkout experience — streamlining the purchase journey to reduce drop-off, improve conversion, and provide a seamless, confidence-building path to purchase across web and app.",
                   ]} />
                   <CompanyBadge name="IKEA" color="#fcebaf" />
                   <BulletList items={[
