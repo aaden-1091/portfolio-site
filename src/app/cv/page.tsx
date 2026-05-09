@@ -247,11 +247,11 @@ export default function CVPage() {
                 <div className="flex flex-col gap-3">
                   <CompanyBadge name="Target Australia" color="#f5dcdc" />
                   <BulletList items={[
-                    "Review and refine the post-purchase experience for consumers looking at all touchpoints and messaging.",
-                    "Design, test and implement a new online returns portal creating a new channel for customers to manage their online product returns.",
-                    "My Account Dashboard experience (App)",
-                    "Improved Click & Collect experience for consumers to manage their online orders (App/Web)",
-                    "Design System Creation and implementation to ensure consistency and brand alignment across all digital touchpoints.",
+                    "Reviewed and refined the end-to-end post-purchase experience across all customer touchpoints and communications — ensuring messaging was timely, consistent, and reassuring to build confidence and drive repeat purchase behaviour.",
+                    "Designed, tested, and implemented a new online returns portal — creating a self-serve channel enabling customers to initiate and manage product returns seamlessly online, reducing friction and relieving pressure on the contact centre.",
+                    "Designed and delivered a redesigned My Account Dashboard for the Target app — giving customers a clear, centralised view of their orders, returns, and account details through an accessible and easy-to-navigate interface.",
+                    "Improved the Click & Collect experience across app and web — enabling customers to more easily track, manage, and update their online orders, reducing drop-off and improving satisfaction at this critical fulfilment touchpoint.",
+                    "Led the creation and implementation of a Design System to establish a consistent visual language, scalable UX patterns, and brand alignment across all digital touchpoints — accelerating design and development velocity across the team.",
                   ]} />
                   <CompanyBadge name="IKEA" color="#fcebaf" />
                   <BulletList items={[
