@@ -66,30 +66,55 @@ export default function CVPage() {
     <div className="bg-background min-h-screen">
 
       {/* Header */}
-      <header className="bg-ink text-white px-6 md:px-12 py-10">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-start md:items-center">
+      <header className="bg-ink text-white px-6 md:px-12 py-8">
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-8 items-start lg:items-center">
 
-          {/* Photo */}
-          <div className="shrink-0">
+          {/* Left: Photo + name + title */}
+          <div className="flex items-center gap-5 shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={PHOTO_URL}
               alt="Aaron de Netto"
-              className="w-32 h-32 rounded-full object-cover bg-ink"
+              className="w-20 h-20 rounded-full object-cover bg-ink shrink-0"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = "/illustrations/screen-placeholder.svg";
               }}
             />
+            <div>
+              <h1 className="font-normal text-3xl leading-[1.1] mb-1">
+                Aaron<br />de Netto.
+              </h1>
+              <p className="text-sm font-light text-white/70">Lead Product Designer</p>
+            </div>
           </div>
 
-          {/* Name + title */}
+          {/* Centre: Summary */}
           <div className="flex-1">
-            <h1 className="font-normal text-3xl md:text-4xl leading-[1.1] mb-1">
-              Aaron<br />de Netto.
-            </h1>
-            <p className="text-sm font-light text-white/70">
-              Lead Product Designer
+            <p className="text-xs text-white/80 leading-relaxed font-light">
+              Product design leader with 10+ years crafting end-to-end experiences across consumer eCommerce, enterprise SaaS, and B2B platforms. I set design direction across complex, multi-stakeholder problem spaces — partnering with product and engineering to deliver 0-to-1 solutions, scale design systems, and align executive stakeholders. Known for navigating ambiguity with rigour: grounding decisions in research, driving cross-functional alignment, and mentoring teams to do their best work.
             </p>
+          </div>
+
+          {/* Right: Contact details */}
+          <div className="flex flex-col gap-2 shrink-0 text-xs text-white/70">
+            <a href="mailto:aarondenetto1010@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              aarondenetto1010@gmail.com
+            </a>
+            <span className="flex items-center gap-2">
+              <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              0423499002
+            </span>
+            <a href="https://linkedin.com/in/aaron-denetto/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+              <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              linkedin.com/in/aaron-denetto/
+            </a>
           </div>
 
         </div>
@@ -100,15 +125,6 @@ export default function CVPage() {
         <Link href="/" className="text-xs font-semibold uppercase tracking-widest text-ink-light hover:text-ink transition-colors">
           ← Back to portfolio
         </Link>
-      </div>
-
-      {/* Professional Summary */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 pt-4">
-        <div className="bg-ink rounded-lg px-5 py-4">
-          <p className="text-xs text-white/80 leading-relaxed font-light">
-            Product design leader with 10+ years crafting end-to-end experiences across consumer eCommerce, enterprise SaaS, and B2B platforms. I set design direction across complex, multi-stakeholder problem spaces — partnering with product and engineering to deliver 0-to-1 solutions, scale design systems, and align executive stakeholders. Known for navigating ambiguity with rigour: grounding decisions in research, driving cross-functional alignment, and mentoring teams to do their best work.
-          </p>
-        </div>
       </div>
 
       {/* Main content */}
