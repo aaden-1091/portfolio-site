@@ -274,7 +274,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Design</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Concept design", "Design strategy", "Process flows", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma", "B2B / Enterprise design", "Complex workflow design"].map(s => (
+                  {["Concept design", "Design strategy", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma", "B2B / Enterprise design"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
@@ -283,7 +283,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Research</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Data analysis (Google Analytics)", "Task analysis", "A/B Experimental strategy and testing", "Human-centred design", "User testing strategy", "Empathy mapping", "Jobs-to-be-done"].map(s => (
+                  {["Data analysis (Google Analytics)", "A/B Experimental strategy and testing", "Human-centred design", "User testing strategy", "Empathy mapping"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
@@ -292,7 +292,7 @@ export default function CVPage() {
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-ink-light text-lg">Collaboration</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Facilitate workshops", "Run design showcases", "Sprint Planning", "Stakeholder management", "Communicative", "Design & Product Retros", "Cross-functional alignment"].map(s => (
+                  {["Facilitate workshops", "Stakeholder management", "Cross-functional alignment"].map(s => (
                     <Pill key={s} label={s} />
                   ))}
                 </div>
