@@ -269,11 +269,11 @@ export default function CVPage() {
             </section>
 
             {/* Skills */}
-            <section className="bg-background rounded-lg shadow-[0px_4px_10px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-6">
+            <section className="bg-background rounded-lg shadow-[0px_4px_5px_rgba(0,0,0,0.05)] px-5 py-6 flex flex-col gap-5">
               <h2 className="font-semibold text-ink text-2xl">Skills.</h2>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-ink-light text-lg">Design</h3>
+                <h3 className="font-semibold text-ink text-base">Design</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Concept design", "Design strategy", "Design Systems/UI Kits", "Accessible and inclusive design", "Prototyping", "Agentic AI", "Figma", "B2B / Enterprise design"].map(s => (
                     <Pill key={s} label={s} />
@@ -282,7 +282,7 @@ export default function CVPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-ink-light text-lg">Research</h3>
+                <h3 className="font-semibold text-ink text-base">Research</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Data analysis (Google Analytics)", "A/B Experimental strategy and testing", "Human-centred design", "User testing strategy", "Empathy mapping"].map(s => (
                     <Pill key={s} label={s} />
@@ -291,7 +291,7 @@ export default function CVPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-ink-light text-lg">Collaboration</h3>
+                <h3 className="font-semibold text-ink text-base">Collaboration</h3>
                 <div className="flex flex-wrap gap-2">
                   {["Facilitate workshops", "Stakeholder management", "Cross-functional alignment"].map(s => (
                     <Pill key={s} label={s} />
