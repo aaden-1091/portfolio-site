@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 
@@ -91,7 +91,7 @@ export default function CVPage() {
           {/* Centre: Summary */}
           <div className="flex-1">
             <p className="text-xs text-white/80 leading-relaxed font-light">
-              Product design leader with 10+ years crafting end-to-end experiences across consumer eCommerce, enterprise SaaS, and B2B platforms. I set design direction across complex, multi-stakeholder problem spaces — partnering with product and engineering to deliver 0-to-1 solutions, scale design systems, and align executive stakeholders. Known for navigating ambiguity with rigour: grounding decisions in research, driving cross-functional alignment, and mentoring teams to do their best work.
+              Product design leader with 10+ years crafting end-to-end experiences across consumer eCommerce, enterprise SaaS, and B2B platforms. I set design direction across complex, multi-stakeholder problem spaces - partnering with product and engineering to deliver 0-to-1 solutions, scale design systems, and align executive stakeholders. Known for navigating ambiguity with rigour: grounding decisions in research, driving cross-functional alignment, and mentoring teams to do their best work.
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export default function CVPage() {
 
               <Divider />
 
-              {/* Target Australia — Manager */}
+              {/* Target Australia - Manager */}
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-3">
                   <RoleHeader company="Target Australia" badgeColor="#f5dcdc" title="eCommerce Design Manager" years="2022 – 2023" />
@@ -160,7 +160,7 @@ export default function CVPage() {
                   ]} />
                 </div>
 
-                {/* Target Australia — Lead (no badge, same company) */}
+                {/* Target Australia - Lead (no badge, same company) */}
                 <div className="flex flex-col gap-3">
                   <div className="flex justify-between items-center gap-2">
                     <span className="font-semibold text-ink text-base leading-tight">UX – UI Design Lead</span>
@@ -216,18 +216,18 @@ export default function CVPage() {
                 <div className="flex flex-col gap-3">
                   <CompanyBadge name="Target Australia" color="#f5dcdc" />
                   <BulletList items={[
-                    "Led a comprehensive UX/UI uplift of Product Listing and Product Description Pages — improving visual hierarchy, scannability, and purchase confidence through stronger content layout, clearer CTAs, and optimised product imagery presentation. (Web/App)",
-                    "Redesigned the site header and navigation to reduce unnecessary clicks and friction in the discovery journey — simplifying information architecture and improving wayfinding to help consumers find and reach products faster. (Web/App)",
-                    "Led a full homepage redesign balancing business priorities with consumer needs — surfacing inspiration, promotions, and tools to drive immediate engagement and purchase intent, while establishing repeatable design patterns to increase the design team's delivery efficiency. (Web/App)",
-                    "Delivered an end-to-end Search Functionality uplift — improving result relevance, filtering, and zero-results handling to ensure consumers consistently found what they were looking for, following UX best practices throughout. (App)",
-                    "Designed and delivered a new Cart and Checkout experience — streamlining the purchase journey to reduce drop-off, improve conversion, and provide a seamless, confidence-building path to purchase across web and app.",
+                    "Led a comprehensive UX/UI uplift of Product Listing and Product Description Pages - improving visual hierarchy, scannability, and purchase confidence through stronger content layout, clearer CTAs, and optimised product imagery presentation. (Web/App)",
+                    "Redesigned the site header and navigation to reduce unnecessary clicks and friction in the discovery journey - simplifying information architecture and improving wayfinding to help consumers find and reach products faster. (Web/App)",
+                    "Led a full homepage redesign balancing business priorities with consumer needs - surfacing inspiration, promotions, and tools to drive immediate engagement and purchase intent, while establishing repeatable design patterns to increase the design team's delivery efficiency. (Web/App)",
+                    "Delivered an end-to-end Search Functionality uplift - improving result relevance, filtering, and zero-results handling to ensure consumers consistently found what they were looking for, following UX best practices throughout. (App)",
+                    "Designed and delivered a new Cart and Checkout experience - streamlining the purchase journey to reduce drop-off, improve conversion, and provide a seamless, confidence-building path to purchase across web and app.",
                   ]} />
                   <CompanyBadge name="IKEA" color="#fcebaf" />
                   <BulletList items={[
-                    "Led a UX/UI uplift across Product Listing and Product Description Pages — improving information hierarchy, product presentation, and purchase-driving elements to better support discovery and conversion. (Web)",
-                    "Redesigned the site header and navigation to reduce journey friction and unnecessary clicks — simplifying the information architecture to help customers find and reach products faster and more intuitively. (Web)",
-                    "Delivered a full homepage redesign aligned to both business priorities and customer needs — creating an inspiring, shoppable experience that drove immediate purchase intent while establishing reusable design patterns to improve the design team's delivery efficiency. (Web)",
-                    "Partnered closely with the eCommerce Manager to define and build out a CRO strategy plan — identifying key conversion opportunities across departments and optimising critical touchpoints across web and app to drive measurable improvements in acquisition, engagement, and revenue.",
+                    "Led a UX/UI uplift across Product Listing and Product Description Pages - improving information hierarchy, product presentation, and purchase-driving elements to better support discovery and conversion. (Web)",
+                    "Redesigned the site header and navigation to reduce journey friction and unnecessary clicks - simplifying the information architecture to help customers find and reach products faster and more intuitively. (Web)",
+                    "Delivered a full homepage redesign aligned to both business priorities and customer needs - creating an inspiring, shoppable experience that drove immediate purchase intent while establishing reusable design patterns to improve the design team's delivery efficiency. (Web)",
+                    "Partnered closely with the eCommerce Manager to define and build out a CRO strategy plan - identifying key conversion opportunities across departments and optimising critical touchpoints across web and app to drive measurable improvements in acquisition, engagement, and revenue.",
                   ]} />
                 </div>
               </div>
@@ -242,11 +242,11 @@ export default function CVPage() {
                 <div className="flex flex-col gap-3">
                   <CompanyBadge name="Target Australia" color="#f5dcdc" />
                   <BulletList items={[
-                    "Reviewed and refined the end-to-end post-purchase experience across all customer touchpoints and communications — ensuring messaging was timely, consistent, and reassuring to build confidence and drive repeat purchase behaviour.",
-                    "Designed, tested, and implemented a new online returns portal — creating a self-serve channel enabling customers to initiate and manage product returns seamlessly online, reducing friction and relieving pressure on the contact centre.",
-                    "Designed and delivered a redesigned My Account Dashboard for the Target app — giving customers a clear, centralised view of their orders, returns, and account details through an accessible and easy-to-navigate interface.",
-                    "Improved the Click & Collect experience across app and web — enabling customers to more easily track, manage, and update their online orders, reducing drop-off and improving satisfaction at this critical fulfilment touchpoint.",
-                    "Led the creation and implementation of a Design System to establish a consistent visual language, scalable UX patterns, and brand alignment across all digital touchpoints — accelerating design and development velocity across the team.",
+                    "Reviewed and refined the end-to-end post-purchase experience across all customer touchpoints and communications - ensuring messaging was timely, consistent, and reassuring to build confidence and drive repeat purchase behaviour.",
+                    "Designed, tested, and implemented a new online returns portal - creating a self-serve channel enabling customers to initiate and manage product returns seamlessly online, reducing friction and relieving pressure on the contact centre.",
+                    "Designed and delivered a redesigned My Account Dashboard for the Target app - giving customers a clear, centralised view of their orders, returns, and account details through an accessible and easy-to-navigate interface.",
+                    "Improved the Click & Collect experience across app and web - enabling customers to more easily track, manage, and update their online orders, reducing drop-off and improving satisfaction at this critical fulfilment touchpoint.",
+                    "Led the creation and implementation of a Design System to establish a consistent visual language, scalable UX patterns, and brand alignment across all digital touchpoints - accelerating design and development velocity across the team.",
                   ]} />
                   <CompanyBadge name="IKEA" color="#fcebaf" />
                   <BulletList items={[
@@ -255,14 +255,14 @@ export default function CVPage() {
                   <CompanyBadge name="Bastion" color="#433f3f" />
                   <BulletList items={[
                     "Created a UI Kit for an online news publication spanning 4 brands, ensuring best-practice UX design principles are in place. The UI Kit streamlines the business's design and development process whilst enhancing user experience across platforms.",
-                    "Led end-to-end discovery, design, testing, and handover of a brand new consumer app for a leading enterprise delivery company — creating an intuitive mobile experience enabling users to effortlessly track, manage, and stay informed on their deliveries in real time.",
-                    "Conducted extensive research and in-depth customer interviews across a diverse range of ages, backgrounds, and demographics to understand the full vehicle rental journey — from discovery and comparison through to booking, use, and post-hire. Findings were synthesised into a comprehensive end-to-end customer journey map documenting current-state experiences, key touchpoints, pain points, and prioritised opportunities for improvement.",
-                    "Supported the full replatform and redesign of a luxury furniture retailer's digital presence — encompassing site architecture, UX/UI design, development handover, SEO strategy, and a CRO plan to grow brand awareness and drive sustainable online sales growth.",
-                    "Designed an end-to-end personalisation experience for a digital media company's TV application — guiding users through an intuitive QR code-initiated onboarding flow to curate and prioritise the news and content most relevant to them. The experience balanced rich personalisation with full transparency, using clear progress indicators to ensure the journey felt seamless, engaging, and always in the user's control.",
+                    "Led end-to-end discovery, design, testing, and handover of a brand new consumer app for a leading enterprise delivery company - creating an intuitive mobile experience enabling users to effortlessly track, manage, and stay informed on their deliveries in real time.",
+                    "Conducted extensive research and in-depth customer interviews across a diverse range of ages, backgrounds, and demographics to understand the full vehicle rental journey - from discovery and comparison through to booking, use, and post-hire. Findings were synthesised into a comprehensive end-to-end customer journey map documenting current-state experiences, key touchpoints, pain points, and prioritised opportunities for improvement.",
+                    "Supported the full replatform and redesign of a luxury furniture retailer's digital presence - encompassing site architecture, UX/UI design, development handover, SEO strategy, and a CRO plan to grow brand awareness and drive sustainable online sales growth.",
+                    "Designed an end-to-end personalisation experience for a digital media company's TV application - guiding users through an intuitive QR code-initiated onboarding flow to curate and prioritise the news and content most relevant to them. The experience balanced rich personalisation with full transparency, using clear progress indicators to ensure the journey felt seamless, engaging, and always in the user's control.",
                   ]} />
                   <CompanyBadge name="ReadyTech" color="#a0e4a0" />
                   <BulletList items={[
-                    "0-to-1 design of the Application Assessment Checklist — an intuitive, multi-user-type workflow enabling admissions teams to seamlessly manage and progress applications once all required information has been submitted. Built-in mechanisms allow teams to connect directly with applicants to follow up on outstanding items, assign tasks across departments, and maintain clear visibility over the full assessment pipeline — reducing manual effort and processing time across multiple campuses.",
+                    "0-to-1 design of the Application Assessment Checklist - an intuitive, multi-user-type workflow enabling admissions teams to seamlessly manage and progress applications once all required information has been submitted. Built-in mechanisms allow teams to connect directly with applicants to follow up on outstanding items, assign tasks across departments, and maintain clear visibility over the full assessment pipeline - reducing manual effort and processing time across multiple campuses.",
                   ]} />
                 </div>
               </div>
