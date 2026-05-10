@@ -224,9 +224,10 @@ export default function CVPage() {
                   ]} />
                   <CompanyBadge name="IKEA" color="#fcebaf" />
                   <BulletList items={[
-                    "UX/UI Uplift to Product Description Pages (Web)",
-                    "Improved UX/UI Layout and design across site header and navigation with the goal of removing unnecessary clicks within the journey and helping the consumer find products quicker. (Web)",
-                    "Homepage Redesign that followed business priorities as well as consumer needs displaying inspiration and tools to shop right away. A secondary focus on efficiencies and delivery for the design team. (Web)",
+                    "Led a UX/UI uplift across Product Listing and Product Description Pages — improving information hierarchy, product presentation, and purchase-driving elements to better support discovery and conversion. (Web)",
+                    "Redesigned the site header and navigation to reduce journey friction and unnecessary clicks — simplifying the information architecture to help customers find and reach products faster and more intuitively. (Web)",
+                    "Delivered a full homepage redesign aligned to both business priorities and customer needs — creating an inspiring, shoppable experience that drove immediate purchase intent while establishing reusable design patterns to improve the design team's delivery efficiency. (Web)",
+                    "Partnered closely with the eCommerce Manager to define and build out a CRO strategy plan — identifying key conversion opportunities across departments and optimising critical touchpoints across web and app to drive measurable improvements in acquisition, engagement, and revenue.",
                   ]} />
                 </div>
               </div>
