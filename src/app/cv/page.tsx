@@ -262,8 +262,8 @@ export default function CVPage() {
                   ]} />
                   <CompanyBadge name="ReadyTech" color="#a0e4a0" />
                   <BulletList items={[
-                    "Led 0-to-1 design of the Application Assessment Checklist within ReadyStudent Admissions - a structured, multi-user-type workflow enabling admissions teams to manage, review, and progress applications from submission through to outcome. Designed built-in task assignment, applicant follow-up mechanisms, and pipeline visibility tools to reduce manual coordination effort, improve processing efficiency, and support consistent assessment outcomes across multiple campuses.",
-                    "Led the design of the Communication and Status Management experience within ReadyStudent Admissions - shaping how admissions teams and applicants send, receive, and track communications throughout the full application journey. Contributed to defining the end-to-end solution, including status visibility, notification design, and communication workflows, ensuring both staff and applicants had a clear, consistent, and confidence-building view of where each application stood at every stage.",
+                    "Led 0-to-1 design of the Application Assessment Checklist within ReadyStudent Admissions - a multi-user workflow enabling admissions teams to manage, review, and progress applications from submission to outcome, with built-in task assignment, applicant follow-up, and pipeline visibility across multiple campuses.",
+                    "Led design of the Communication and Status Management experience within ReadyStudent Admissions - defining how admissions teams and applicants track and manage communications throughout the application journey, giving both staff and applicants clear, consistent visibility at every stage.",
                   ]} />
                 </div>
               </div>
