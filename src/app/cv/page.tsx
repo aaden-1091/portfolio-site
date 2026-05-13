@@ -84,7 +84,7 @@ export default function CVPage() {
               <h1 className="font-normal text-3xl leading-[1.1] mb-1">
                 Aaron<br />de Netto.
               </h1>
-              <p className="text-sm font-light text-white/70">Lead Product Designer</p>
+              <p className="text-sm font-light text-white/70">Senior Product Designer</p>
             </div>
           </div>
 

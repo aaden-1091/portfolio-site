@@ -10,9 +10,9 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Aaron de Netto | UX UI Design Lead",
+  title: "Aaron de Netto | Senior Product Designer",
   description:
-    "Aaron de Netto — UX/UI Design Lead with experience in e-commerce, SaaS, design systems, and accessibility. Based in Australia.",
+    "Aaron de Netto — Senior Product Designer with experience in e-commerce, SaaS, design systems, and accessibility. Based in Australia.",
 };
 
 export default function RootLayout({

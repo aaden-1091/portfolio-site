@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="max-w-6xl">
         <div className="flex items-center gap-4">
           <Badge status="available" label="Aaron de Netto" />
-          <span className="text-xs font-semibold uppercase tracking-widest text-ink-light">Lead Product Designer</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-ink-light">Senior Product Designer</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/illustrations/aaron-illustration.png"

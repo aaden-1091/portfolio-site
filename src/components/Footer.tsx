@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Identity mark */}
         <div className="mb-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-accent mb-4">
-            UX UI Design Lead
+            Senior Product Designer
           </p>
           <h2
             id="footer-heading"
