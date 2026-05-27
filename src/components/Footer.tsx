@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className="space-y-4 font-medium">
               {[
                 { label: "LinkedIn", href: "https://www.linkedin.com/in/aaron-denetto/", external: true },
-                { label: "CV", href: "/cv", external: false },
+                // { label: "CV", href: "/cv", external: false },
               ].map(({ label, href, external }) => (
                 <li key={label}>
                   <a

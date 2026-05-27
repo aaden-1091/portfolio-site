@@ -2,6 +2,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function WorkGrid() {
+  const visibleProjects = projects.filter((p) => !p.hidden);
   return (
     <section
       id="work"
@@ -19,13 +20,13 @@ export default function WorkGrid() {
           Selected <span className="block">Archives.</span>
         </h2>
         <p className="text-xs font-bold uppercase tracking-widest text-ink-light">
-          {String(projects.length).padStart(2, "0")} case studies
+          {String(visibleProjects.length).padStart(2, "0")} case studies
         </p>
       </div>
 
       {/* Equal 2×2 grid — no hierarchy */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
-        {projects.map((project, i) => (
+        {visibleProjects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
       </div>

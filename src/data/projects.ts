@@ -8,6 +8,7 @@ export interface Project {
   image:       string;
   tags:        string[];
   category:    "All" | "E-commerce" | "Design Systems" | "SaaS";
+  hidden?:     boolean;
 }
 
 export const projects: Project[] = [
@@ -21,6 +22,7 @@ export const projects: Project[] = [
     image:       "/illustrations/cs1-cover.png",
     tags:        ["SaaS", "UX Design", "Education"],
     category:    "SaaS",
+    hidden:      true,
   },
   {
     id:          "2",
