@@ -22,7 +22,6 @@ export const projects: Project[] = [
     image:       "/illustrations/cs1-cover.png",
     tags:        ["SaaS", "UX Design", "Education"],
     category:    "SaaS",
-    hidden:      true,
   },
   {
     id:          "2",
